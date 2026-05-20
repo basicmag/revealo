@@ -1,10 +1,17 @@
-const CACHE_NAME = "revealo-pwa-v21";
+const CACHE_NAME = "revealo-pwa-v24";
 const APP_SHELL = [
   "./",
   "./index.html",
   "./styles.css",
+  "./site.css",
+  "./ads-config.js",
   "./app.js",
   "./puzzles.js",
+  "./home/",
+  "./play/",
+  "./about/",
+  "./privacy/",
+  "./contact/",
   "./manifest.webmanifest",
   "./icons/icon-192.png",
   "./icons/icon-512.png"

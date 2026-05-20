@@ -306,6 +306,23 @@ h1 {
   background: #e5e7eb;
 }
 
+.ad-slot[hidden] {
+  display: none !important;
+}
+
+.ad-slot {
+  overflow: hidden;
+  min-height: 96px;
+  margin: 16px 0;
+  border-radius: 18px;
+  background: #eef2f7;
+}
+
+.clear-ad-slot {
+  margin: 0 16px 16px;
+  min-height: 84px;
+}
+
 .back-button {
   border: 0;
   border-radius: 999px;

@@ -22,6 +22,7 @@
     </header>
 
     <section class="puzzle-select" id="puzzleSelect"></section>
+    <section class="ad-slot" id="adListBottom" aria-label="Advertisement" hidden></section>
 
     <section class="image-tool" id="imageTool">
       <h2>画像から数値マップ生成</h2>
@@ -169,6 +170,7 @@
       <button id="clearBackBtn">パズル一覧へ</button>
       <button id="closeClear">閉じる</button>
     </div>
+    <div class="ad-slot clear-ad-slot" id="adClearBottom" aria-label="Advertisement" hidden></div>
   </dialog>
 
   <dialog id="guessDialog" class="guess-dialog">
@@ -183,7 +185,6 @@
   <dialog id="helpDialog">
     <h3>Revealoの遊び方</h3>
     <p>行と列のヒントを見て、マスを空白・塗り色で埋めます。</p>
-    <p>白黒モードでは、グレーと黒の2色を使います。カラーモードでは、指定されたパレットの色を使います。</p>
     <p>ヒントは、同じ色が何マス連続するかを表します。空白は表示されません。</p>
     <p>画像付きパズルでは、未入力セルに薄い線画が表示され、正解セルは元画像の同じ位置に置き換わります。クリア後は盤面全体に元画像が表示されます。</p>
     <button id="openTutorialBtn">チュートリアルを見る</button>
@@ -208,6 +209,7 @@
     </div>
   </dialog>
 
+  <script src="./ads-config.js"></script>
   <script src="./puzzles.js"></script>
   <script src="./app.js"></script>
   <script>

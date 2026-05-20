@@ -142,6 +142,7 @@ const tutorialVersion = 1;
 const dailyStoragePrefix = "revealo-daily-progress:";
 const appLocale = (navigator.language || navigator.userLanguage || "en").toLowerCase().startsWith("ja") ? "ja" : "en";
 document.documentElement.lang = appLocale;
+const adConfig = window.REVEALO_ADS ?? {};
 const UI_TEXT = {
   ja: {
     appTitle: "リビーロ",
@@ -185,9 +186,8 @@ const UI_TEXT = {
     clearTitle: "クリアしました",
     helpTitle: "リビーロの遊び方",
     help1: "行と列のヒントを見て、マスを空白・塗り色で埋めます。",
-    help2: "白黒モードでは、グレーと黒の2色を使います。カラーモードでは、指定されたパレットの色を使います。",
-    help3: "ヒントは、同じ色が何マス連続するかを表します。空白は表示されません。",
-    help4: "画像付きパズルでは、未入力セルの一部に下絵が表示され、正解セルを塗るたびに新しい下絵セルが開示されます。",
+    help2: "ヒントは、同じ色が何マス連続するかを表します。空白は表示されません。",
+    help3: "画像付きパズルでは、未入力セルの一部に下絵が表示され、正解セルを塗るたびに新しい下絵セルが開示されます。",
     tutorialReplay: "チュートリアルを見る",
     tutorialKicker: "Tutorial",
     tutorialTitle: "リビーロへようこそ",
@@ -245,9 +245,8 @@ const UI_TEXT = {
     clearTitle: "Puzzle Complete",
     helpTitle: "How to Play",
     help1: "Use the row and column clues to fill each cell with blank or the correct color.",
-    help2: "Mono puzzles use gray and black. Color puzzles use the specified palette.",
-    help3: "Each clue shows how many consecutive cells of the same color appear. Blank cells are not shown.",
-    help4: "Image puzzles reveal some guide cells at the start, then reveal another guide cell whenever you fill a correct cell.",
+    help2: "Each clue shows how many consecutive cells of the same color appear. Blank cells are not shown.",
+    help3: "Image puzzles reveal some guide cells at the start, then reveal another guide cell whenever you fill a correct cell.",
     tutorialReplay: "Tutorial",
     tutorialKicker: "Tutorial",
     tutorialTitle: "Welcome to Revealo",
@@ -269,6 +268,7 @@ let tutorialStepIndex = 0;
 let pendingStartupPuzzleId = null;
 let currentPlayMode = "normal";
 let currentDailyDate = null;
+let adsenseScriptRequested = false;
 
 let puzzle = null;
 let selected = 0;
@@ -648,6 +648,7 @@ function renderPuzzleSelect() {
   });
 
   select.appendChild(list);
+  renderAdSlot("adListBottom", "puzzleListBottom");
 }
 
 function startPuzzle(puzzleId, options = {}) {
@@ -681,6 +682,7 @@ function startPuzzle(puzzleId, options = {}) {
   const modeLabel = currentPlayMode === "daily" ? `${ui.dailyChallenge} / ` : "";
   document.getElementById("puzzleMeta").textContent = `${modeLabel}${puzzle.createdAt} / ${puzzle.difficulty} / ${puzzle.size}x${puzzle.size}${isColorPuzzle() ? " / Color" : ""}`;
   document.getElementById("puzzleSelect").classList.add("hidden");
+  document.getElementById("adListBottom").hidden = true;
   document.getElementById("imageTool").classList.add("hidden");
   document.getElementById("gameView").classList.remove("hidden");
 
@@ -699,6 +701,52 @@ function showPuzzleSelect() {
   document.getElementById("puzzleSelect").classList.remove("hidden");
   document.getElementById("imageTool").classList.add("hidden");
   renderPuzzleSelect();
+}
+
+function adsEnabled() {
+  return Boolean(adConfig.enabled && adConfig.publisherId);
+}
+
+function adSlotConfig(name) {
+  return adConfig.slots?.[name] ?? null;
+}
+
+function loadAdsenseScript() {
+  if (!adsEnabled() || adsenseScriptRequested) return;
+  adsenseScriptRequested = true;
+  const script = document.createElement("script");
+  script.async = true;
+  script.crossOrigin = "anonymous";
+  script.src = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${encodeURIComponent(adConfig.publisherId)}`;
+  document.head.appendChild(script);
+}
+
+function renderAdSlot(elementId, slotName) {
+  const container = document.getElementById(elementId);
+  const slot = adSlotConfig(slotName);
+  if (!container) return;
+  container.innerHTML = "";
+  if (!adsEnabled() || !slot?.slotId) {
+    container.hidden = true;
+    return;
+  }
+
+  container.hidden = false;
+  const ad = document.createElement("ins");
+  ad.className = "adsbygoogle";
+  ad.style.display = "block";
+  ad.dataset.adClient = adConfig.publisherId;
+  ad.dataset.adSlot = slot.slotId;
+  ad.dataset.adFormat = slot.format || "auto";
+  ad.dataset.fullWidthResponsive = slot.fullWidthResponsive ?? "true";
+  container.appendChild(ad);
+  loadAdsenseScript();
+  window.adsbygoogle = window.adsbygoogle || [];
+  try {
+    window.adsbygoogle.push({});
+  } catch {
+    container.hidden = true;
+  }
 }
 
 function isGiven(r, c) {
@@ -1118,6 +1166,7 @@ function showClearDialog() {
     nextButton.textContent = ui.allClear;
   }
 
+  renderAdSlot("adClearBottom", "clearDialogBottom");
   if (!dialog.open) dialog.showModal();
 }
 
@@ -1332,7 +1381,7 @@ function applyLocaleText() {
   const helpTitle = document.querySelector("#helpDialog h3");
   if (helpTitle) helpTitle.textContent = ui.helpTitle;
   const helpParagraphs = document.querySelectorAll("#helpDialog p");
-  [ui.help1, ui.help2, ui.help3, ui.help4].forEach((text, index) => {
+  [ui.help1, ui.help2, ui.help3].forEach((text, index) => {
     if (helpParagraphs[index]) helpParagraphs[index].textContent = text;
   });
   const missStat = document.querySelector(".stats span:first-child");
