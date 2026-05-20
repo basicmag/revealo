@@ -140,6 +140,8 @@ const toolDefaultsKey = "revealo-tool-defaults";
 const tutorialKey = "revealo-tutorial";
 const tutorialVersion = 1;
 const dailyStoragePrefix = "revealo-daily-progress:";
+const progressSchemaVersion = 3;
+const resetUnsignedProgressPuzzleIds = new Set(["p055", "p056"]);
 const appLocale = (navigator.language || navigator.userLanguage || "en").toLowerCase().startsWith("ja") ? "ja" : "en";
 document.documentElement.lang = appLocale;
 const adConfig = window.REVEALO_ADS ?? {};
@@ -477,7 +479,7 @@ function normalizeBoard(savedBoard, size) {
 
 function boardFromProgress(saved, targetPuzzle) {
   if (!saved?.board) return null;
-  if (saved.schemaVersion === 2) return saved.board;
+  if (saved.schemaVersion >= 2) return saved.board;
   return normalizeBoard(saved.board, targetPuzzle.size);
 }
 
@@ -512,7 +514,7 @@ function puzzlesById() {
 
 function firstUnclearedPuzzleId() {
   const sorted = puzzlesById();
-  return sorted.find(item => !loadProgress(item.id)?.completed)?.id ?? sorted[0]?.id;
+  return sorted.find(item => !loadCompatibleProgress(item)?.completed)?.id ?? sorted[0]?.id;
 }
 
 function puzzleLocaleData(targetPuzzle = puzzle, locale = appLocale) {
@@ -580,6 +582,36 @@ function loadProgress(puzzleId, mode = currentPlayMode, dateKey = currentDailyDa
   }
 }
 
+function puzzleSolutionSignature(targetPuzzle) {
+  const text = [
+    targetPuzzle?.id ?? "",
+    targetPuzzle?.size ?? "",
+    targetPuzzle?.mode ?? "",
+    (targetPuzzle?.solution ?? []).map(row => row.join(",")).join(";"),
+    (targetPuzzle?.palette ?? []).map(item => `${item.id}:${item.color}`).join(",")
+  ].join("|");
+  let hash = 2166136261;
+  for (let i = 0; i < text.length; i++) {
+    hash ^= text.charCodeAt(i);
+    hash = Math.imul(hash, 16777619) >>> 0;
+  }
+  return hash.toString(16).padStart(8, "0");
+}
+
+function isCompatibleProgress(saved, targetPuzzle) {
+  if (!saved) return false;
+  if (saved.solutionSignature) return saved.solutionSignature === puzzleSolutionSignature(targetPuzzle);
+  return !resetUnsignedProgressPuzzleIds.has(targetPuzzle?.id);
+}
+
+function loadCompatibleProgress(targetPuzzle, mode = "normal", dateKey = null) {
+  const saved = loadProgress(targetPuzzle.id, mode, dateKey);
+  if (!saved) return null;
+  if (isCompatibleProgress(saved, targetPuzzle)) return saved;
+  localStorage.removeItem(storageKey(targetPuzzle.id, mode, dateKey));
+  return null;
+}
+
 function currentElapsedSeconds() {
   if (completed) return elapsedBeforeStart;
   return elapsedBeforeStart + Math.floor((Date.now() - started) / 1000);
@@ -588,8 +620,9 @@ function currentElapsedSeconds() {
 function saveProgress() {
   if (!puzzle) return;
   localStorage.setItem(storageKey(puzzle.id), JSON.stringify({
-    schemaVersion: 2,
+    schemaVersion: progressSchemaVersion,
     puzzleId: puzzle.id,
+    solutionSignature: puzzleSolutionSignature(puzzle),
     playMode: currentPlayMode,
     dailyDate: currentDailyDate,
     board,
@@ -614,7 +647,7 @@ function renderPuzzleSelect() {
   const dateKey = localDateKey();
   const dailyPuzzle = dailyPuzzleForDate(dateKey);
   if (dailyPuzzle) {
-    const dailySaved = loadProgress(dailyPuzzle.id, "daily", dateKey);
+    const dailySaved = loadCompatibleProgress(dailyPuzzle, "daily", dateKey);
     const dailyPercent = progressFor(dailyPuzzle, boardFromProgress(dailySaved, dailyPuzzle));
     const dailyButton = document.createElement("button");
     dailyButton.className = "daily-card";
@@ -632,7 +665,7 @@ function renderPuzzleSelect() {
   list.className = "puzzle-list";
 
   puzzles.forEach(item => {
-    const saved = loadProgress(item.id, "normal", null);
+    const saved = loadCompatibleProgress(item, "normal", null);
     const percent = progressFor(item, boardFromProgress(saved, item));
     const status = saved?.completed ? ui.completed : percent > 0 ? ui.progress(percent) : ui.notPlayed;
     const button = document.createElement("button");
@@ -659,7 +692,7 @@ function startPuzzle(puzzleId, options = {}) {
   puzzle = puzzles.find(item => item.id === puzzleId);
   if (!puzzle) return;
   localStorage.setItem(sequenceKey, puzzle.id);
-  const saved = loadProgress(puzzle.id);
+  const saved = loadCompatibleProgress(puzzle, currentPlayMode, currentDailyDate);
   selected = saved?.selected ?? 0;
   board = boardFromProgress(saved, puzzle) ?? emptyBoard(puzzle.size);
   history = [];
