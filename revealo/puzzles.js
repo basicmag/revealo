@@ -3,9 +3,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p001",
     "mode": "color",
     "size": 8,
-    "title": "月夜に眠る猫",
-    "description": "月夜に眠る猫",
-    "category": "夜",
+    "title": "Sleeping Cat Under The Moon",
+    "description": "sleeping cat under the moon",
+    "category": "night",
     "localized": {
       "ja": {
         "title": "月夜に眠る猫",
@@ -168,8 +168,8 @@ window.COLORING_LOGIC_PUZZLES = [
         0
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p001",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p001",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -249,9 +249,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p002",
     "mode": "color",
     "size": 8,
-    "title": "波と泳ぐ鯉",
-    "description": "波と泳ぐ鯉",
-    "category": "海",
+    "title": "Koi Fish And Waves",
+    "description": "koi fish and waves",
+    "category": "ocean",
     "localized": {
       "ja": {
         "title": "波と泳ぐ鯉",
@@ -414,8 +414,8 @@ window.COLORING_LOGIC_PUZZLES = [
         7
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p002",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p002",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -495,9 +495,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p003",
     "mode": "color",
     "size": 8,
-    "title": "桜の枝の小鳥",
-    "description": "桜の枝の小鳥",
-    "category": "春",
+    "title": "Small Bird On A Sakura Branch",
+    "description": "small bird on a sakura branch",
+    "category": "spring",
     "localized": {
       "ja": {
         "title": "桜の枝の小鳥",
@@ -660,8 +660,8 @@ window.COLORING_LOGIC_PUZZLES = [
         3
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p003",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p003",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -741,9 +741,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p004",
     "mode": "color",
     "size": 8,
-    "title": "静かな森の小屋",
-    "description": "静かな森の小屋",
-    "category": "森",
+    "title": "Quiet Forest Cabin",
+    "description": "quiet forest cabin",
+    "category": "forest",
     "localized": {
       "ja": {
         "title": "静かな森の小屋",
@@ -906,8 +906,8 @@ window.COLORING_LOGIC_PUZZLES = [
         7
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p004",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p004",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -987,9 +987,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p005",
     "mode": "color",
     "size": 8,
-    "title": "波と灯台",
-    "description": "波と灯台",
-    "category": "海",
+    "title": "Lighthouse And Rolling Waves",
+    "description": "lighthouse and rolling waves",
+    "category": "ocean",
     "localized": {
       "ja": {
         "title": "波と灯台",
@@ -1152,8 +1152,8 @@ window.COLORING_LOGIC_PUZZLES = [
         7
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p005",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p005",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -1233,9 +1233,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p006",
     "mode": "color",
     "size": 8,
-    "title": "竹林の狐",
-    "description": "竹林の狐",
-    "category": "森",
+    "title": "Fox In A Bamboo Grove",
+    "description": "fox in a bamboo grove",
+    "category": "forest",
     "localized": {
       "ja": {
         "title": "竹林の狐",
@@ -1398,8 +1398,8 @@ window.COLORING_LOGIC_PUZZLES = [
         0
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p006",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p006",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -1479,9 +1479,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p007",
     "mode": "color",
     "size": 8,
-    "title": "雨粒と傘",
-    "description": "雨粒と傘",
-    "category": "雨",
+    "title": "Umbrella And Rain Drops",
+    "description": "umbrella and rain drops",
+    "category": "rain",
     "localized": {
       "ja": {
         "title": "雨粒と傘",
@@ -1644,8 +1644,8 @@ window.COLORING_LOGIC_PUZZLES = [
         4
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p007",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p007",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -1725,9 +1725,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p008",
     "mode": "color",
     "size": 8,
-    "title": "小さな花束",
-    "description": "小さな花束",
-    "category": "春",
+    "title": "Simple Flower Bouquet",
+    "description": "simple flower bouquet",
+    "category": "spring",
     "localized": {
       "ja": {
         "title": "小さな花束",
@@ -1890,8 +1890,8 @@ window.COLORING_LOGIC_PUZZLES = [
         4
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p008",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p008",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -1971,9 +1971,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p009",
     "mode": "color",
     "size": 10,
-    "title": "星空の帆船",
-    "description": "星空の帆船",
-    "category": "夜の海",
+    "title": "Sailboat Under Stars",
+    "description": "sailboat under stars",
+    "category": "night sea",
     "localized": {
       "ja": {
         "title": "星空の帆船",
@@ -2200,8 +2200,8 @@ window.COLORING_LOGIC_PUZZLES = [
         7
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p009",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p009",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -2281,9 +2281,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p010",
     "mode": "color",
     "size": 10,
-    "title": "星と雪だるま",
-    "description": "星と雪だるま",
-    "category": "冬",
+    "title": "Snowman With A Bright Star",
+    "description": "snowman with a bright star",
+    "category": "winter",
     "localized": {
       "ja": {
         "title": "星と雪だるま",
@@ -2510,8 +2510,8 @@ window.COLORING_LOGIC_PUZZLES = [
         5
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p010",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p010",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -2591,9 +2591,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p011",
     "mode": "color",
     "size": 10,
-    "title": "枝の上の丸いフクロウ",
-    "description": "枝の上の丸いフクロウ",
-    "category": "森",
+    "title": "Round Owl On A Branch",
+    "description": "round owl on a branch",
+    "category": "forest",
     "localized": {
       "ja": {
         "title": "枝の上の丸いフクロウ",
@@ -2820,8 +2820,8 @@ window.COLORING_LOGIC_PUZZLES = [
         4
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p011",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p011",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -2901,9 +2901,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p012",
     "mode": "color",
     "size": 10,
-    "title": "湯気の立つティーカップ",
-    "description": "湯気の立つティーカップ",
-    "category": "日常",
+    "title": "Teacup And Small Steam Curls",
+    "description": "teacup and small steam curls",
+    "category": "cozy",
     "localized": {
       "ja": {
         "title": "湯気の立つティーカップ",
@@ -3130,8 +3130,8 @@ window.COLORING_LOGIC_PUZZLES = [
         6
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p012",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p012",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -3211,9 +3211,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p013",
     "mode": "color",
     "size": 10,
-    "title": "三日月と山",
-    "description": "三日月と山",
-    "category": "夜",
+    "title": "Crescent Moon And Mountain",
+    "description": "crescent moon and mountain",
+    "category": "night",
     "localized": {
       "ja": {
         "title": "三日月と山",
@@ -3440,8 +3440,8 @@ window.COLORING_LOGIC_PUZZLES = [
         6
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p013",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p013",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -3521,9 +3521,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p014",
     "mode": "color",
     "size": 10,
-    "title": "海藻とカメ",
-    "description": "海藻とカメ",
-    "category": "海",
+    "title": "Turtle And Seaweed",
+    "description": "turtle and seaweed",
+    "category": "ocean",
     "localized": {
       "ja": {
         "title": "海藻とカメ",
@@ -3750,8 +3750,8 @@ window.COLORING_LOGIC_PUZZLES = [
         5
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p014",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p014",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -3831,9 +3831,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p015",
     "mode": "color",
     "size": 10,
-    "title": "花の上の蝶",
-    "description": "花の上の蝶",
-    "category": "春",
+    "title": "Butterfly Over A Flower",
+    "description": "butterfly over a flower",
+    "category": "spring",
     "localized": {
       "ja": {
         "title": "花の上の蝶",
@@ -4060,8 +4060,8 @@ window.COLORING_LOGIC_PUZZLES = [
         4
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p015",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p015",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -4141,9 +4141,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p016",
     "mode": "color",
     "size": 10,
-    "title": "森のきのこの家",
-    "description": "森のきのこの家",
-    "category": "森",
+    "title": "Mushroom House In The Forest",
+    "description": "mushroom house in the forest",
+    "category": "forest",
     "localized": {
       "ja": {
         "title": "森のきのこの家",
@@ -4362,8 +4362,8 @@ window.COLORING_LOGIC_PUZZLES = [
         5
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p016",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p016",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -4443,9 +4443,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p017",
     "mode": "color",
     "size": 10,
-    "title": "小さな星とクジラ",
-    "description": "小さな星とクジラ",
-    "category": "夜の海",
+    "title": "Whale And Small Stars",
+    "description": "whale and small stars",
+    "category": "ocean night",
     "localized": {
       "ja": {
         "title": "小さな星とクジラ",
@@ -4664,8 +4664,8 @@ window.COLORING_LOGIC_PUZZLES = [
         8
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p017",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p017",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -4745,9 +4745,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p018",
     "mode": "color",
     "size": 10,
-    "title": "三日月とうさぎ",
-    "description": "三日月とうさぎ",
-    "category": "夜",
+    "title": "Rabbit With A Crescent Moon",
+    "description": "rabbit with a crescent moon",
+    "category": "night",
     "localized": {
       "ja": {
         "title": "三日月とうさぎ",
@@ -4966,8 +4966,8 @@ window.COLORING_LOGIC_PUZZLES = [
         6
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p018",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p018",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -5047,9 +5047,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p019",
     "mode": "color",
     "size": 10,
-    "title": "葉っぱつきのリンゴ",
-    "description": "葉っぱつきのリンゴ",
-    "category": "果物",
+    "title": "Apple And Two Leaves",
+    "description": "apple and two leaves",
+    "category": "simple fruit",
     "localized": {
       "ja": {
         "title": "葉っぱつきのリンゴ",
@@ -5268,8 +5268,8 @@ window.COLORING_LOGIC_PUZZLES = [
         2
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p019",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p019",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -5349,9 +5349,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p020",
     "mode": "color",
     "size": 10,
-    "title": "落ち葉とランタン",
-    "description": "落ち葉とランタン",
-    "category": "秋",
+    "title": "Lantern And Falling Leaves",
+    "description": "lantern and falling leaves",
+    "category": "autumn",
     "localized": {
       "ja": {
         "title": "落ち葉とランタン",
@@ -5570,8 +5570,8 @@ window.COLORING_LOGIC_PUZZLES = [
         0
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p020",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p020",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -5651,9 +5651,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p021",
     "mode": "color",
     "size": 10,
-    "title": "氷の上のペンギン",
-    "description": "氷の上のペンギン",
-    "category": "冬",
+    "title": "Penguin On An Ice Floe",
+    "description": "penguin on an ice floe",
+    "category": "winter",
     "localized": {
       "ja": {
         "title": "氷の上のペンギン",
@@ -5872,8 +5872,8 @@ window.COLORING_LOGIC_PUZZLES = [
         1
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p021",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p021",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -5953,9 +5953,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p022",
     "mode": "color",
     "size": 10,
-    "title": "葉っぱの上のカタツムリ",
-    "description": "葉っぱの上のカタツムリ",
-    "category": "森",
+    "title": "Snail On A Green Leaf",
+    "description": "snail on a green leaf",
+    "category": "forest",
     "localized": {
       "ja": {
         "title": "葉っぱの上のカタツムリ",
@@ -6174,8 +6174,8 @@ window.COLORING_LOGIC_PUZZLES = [
         0
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p022",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p022",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -6255,9 +6255,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p023",
     "mode": "color",
     "size": 10,
-    "title": "小さな丘と桜の木",
-    "description": "小さな丘と桜の木",
-    "category": "春",
+    "title": "Sakura Tree And Small Hill",
+    "description": "sakura tree and small hill",
+    "category": "spring",
     "localized": {
       "ja": {
         "title": "小さな丘と桜の木",
@@ -6476,8 +6476,8 @@ window.COLORING_LOGIC_PUZZLES = [
         2
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p023",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p023",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -6557,9 +6557,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p024",
     "mode": "color",
     "size": 10,
-    "title": "池の紙の船",
-    "description": "池の紙の船",
-    "category": "水辺",
+    "title": "Paper Boat On A Pond",
+    "description": "paper boat on a pond",
+    "category": "water",
     "localized": {
       "ja": {
         "title": "池の紙の船",
@@ -6778,8 +6778,8 @@ window.COLORING_LOGIC_PUZZLES = [
         1
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p024",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p024",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -6859,9 +6859,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p025",
     "mode": "color",
     "size": 10,
-    "title": "星と眠る狐",
-    "description": "星と眠る狐",
-    "category": "夜の森",
+    "title": "Sleeping Fox And Stars",
+    "description": "sleeping fox and stars",
+    "category": "night forest",
     "localized": {
       "ja": {
         "title": "星と眠る狐",
@@ -7080,8 +7080,8 @@ window.COLORING_LOGIC_PUZZLES = [
         0
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p025",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p025",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -7161,9 +7161,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p026",
     "mode": "color",
     "size": 12,
-    "title": "お城のシルエット",
-    "description": "お城のシルエット",
-    "category": "ファンタジー",
+    "title": "Simple Castle Silhouette",
+    "description": "simple castle silhouette",
+    "category": "fantasy",
     "localized": {
       "ja": {
         "title": "お城のシルエット",
@@ -7454,8 +7454,8 @@ window.COLORING_LOGIC_PUZZLES = [
         10
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p026",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p026",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -7535,9 +7535,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p027",
     "mode": "color",
     "size": 12,
-    "title": "池の波紋とアヒル",
-    "description": "池の波紋とアヒル",
-    "category": "水辺",
+    "title": "Duck And Pond Ripples",
+    "description": "duck and pond ripples",
+    "category": "water",
     "localized": {
       "ja": {
         "title": "池の波紋とアヒル",
@@ -7828,8 +7828,8 @@ window.COLORING_LOGIC_PUZZLES = [
         10
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p027",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p027",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -7909,9 +7909,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p028",
     "mode": "color",
     "size": 12,
-    "title": "満月と松の木",
-    "description": "満月と松の木",
-    "category": "夜の森",
+    "title": "Pine Tree And Full Moon",
+    "description": "pine tree and full moon",
+    "category": "forest night",
     "localized": {
       "ja": {
         "title": "満月と松の木",
@@ -8202,8 +8202,8 @@ window.COLORING_LOGIC_PUZZLES = [
         0
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p028",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p028",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -8283,9 +8283,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p029",
     "mode": "color",
     "size": 12,
-    "title": "花とイチゴ",
-    "description": "花とイチゴ",
-    "category": "春の果物",
+    "title": "Strawberry And Flower",
+    "description": "strawberry and flower",
+    "category": "spring fruit",
     "localized": {
       "ja": {
         "title": "花とイチゴ",
@@ -8576,8 +8576,8 @@ window.COLORING_LOGIC_PUZZLES = [
         6
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p029",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p029",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -8657,9 +8657,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p030",
     "mode": "color",
     "size": 12,
-    "title": "雲と気球",
-    "description": "雲と気球",
-    "category": "空",
+    "title": "Hot Air Balloon And Clouds",
+    "description": "hot air balloon and clouds",
+    "category": "sky",
     "localized": {
       "ja": {
         "title": "雲と気球",
@@ -8950,8 +8950,8 @@ window.COLORING_LOGIC_PUZZLES = [
         8
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p030",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p030",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -9031,9 +9031,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p031",
     "mode": "color",
     "size": 12,
-    "title": "貝殻とカニ",
-    "description": "貝殻とカニ",
-    "category": "ビーチ",
+    "title": "Crab And Seashell",
+    "description": "crab and seashell",
+    "category": "beach",
     "localized": {
       "ja": {
         "title": "貝殻とカニ",
@@ -9324,8 +9324,8 @@ window.COLORING_LOGIC_PUZZLES = [
         5
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p031",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p031",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -9405,9 +9405,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p032",
     "mode": "color",
     "size": 12,
-    "title": "きのこの下のハリネズミ",
-    "description": "きのこの下のハリネズミ",
-    "category": "森",
+    "title": "Hedgehog Under A Mushroom",
+    "description": "hedgehog under a mushroom",
+    "category": "forest",
     "localized": {
       "ja": {
         "title": "きのこの下のハリネズミ",
@@ -9698,8 +9698,8 @@ window.COLORING_LOGIC_PUZZLES = [
         10
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p032",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p032",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -9779,9 +9779,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p033",
     "mode": "color",
     "size": 12,
-    "title": "椿の花と葉",
-    "description": "椿の花と葉",
-    "category": "花",
+    "title": "Camellia Flower And Leaves",
+    "description": "camellia flower and leaves",
+    "category": "flower",
     "localized": {
       "ja": {
         "title": "椿の花と葉",
@@ -10072,8 +10072,8 @@ window.COLORING_LOGIC_PUZZLES = [
         10
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p033",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p033",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -10153,9 +10153,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p034",
     "mode": "color",
     "size": 12,
-    "title": "山と小さな列車",
-    "description": "山と小さな列車",
-    "category": "旅",
+    "title": "Small Train And Mountain",
+    "description": "small train and mountain",
+    "category": "travel",
     "localized": {
       "ja": {
         "title": "山と小さな列車",
@@ -10446,8 +10446,8 @@ window.COLORING_LOGIC_PUZZLES = [
         4
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p034",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p034",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -10527,9 +10527,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p035",
     "mode": "color",
     "size": 12,
-    "title": "泡とクラゲ",
-    "description": "泡とクラゲ",
-    "category": "海",
+    "title": "Jellyfish And Bubbles",
+    "description": "jellyfish and bubbles",
+    "category": "ocean",
     "localized": {
       "ja": {
         "title": "泡とクラゲ",
@@ -10820,8 +10820,8 @@ window.COLORING_LOGIC_PUZZLES = [
         0
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p035",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p035",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -10901,9 +10901,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p036",
     "mode": "color",
     "size": 15,
-    "title": "はちみつ壺を持つクマ",
-    "description": "はちみつ壺を持つクマ",
-    "category": "森",
+    "title": "Bear With Honey Jar",
+    "description": "bear with honey jar",
+    "category": "forest",
     "localized": {
       "ja": {
         "title": "はちみつ壺を持つクマ",
@@ -11325,8 +11325,8 @@ window.COLORING_LOGIC_PUZZLES = [
         2
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p036",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p036",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -11406,9 +11406,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p037",
     "mode": "color",
     "size": 15,
-    "title": "星夜の窓",
-    "description": "星夜の窓",
-    "category": "夜",
+    "title": "Starry Night Window",
+    "description": "starry night window",
+    "category": "night",
     "localized": {
       "ja": {
         "title": "星夜の窓",
@@ -11830,8 +11830,8 @@ window.COLORING_LOGIC_PUZZLES = [
         1
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p037",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p037",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -11911,9 +11911,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p038",
     "mode": "color",
     "size": 15,
-    "title": "チューリップと蝶",
-    "description": "チューリップと蝶",
-    "category": "春",
+    "title": "Tulip And Butterfly",
+    "description": "tulip and butterfly",
+    "category": "spring",
     "localized": {
       "ja": {
         "title": "チューリップと蝶",
@@ -12335,8 +12335,8 @@ window.COLORING_LOGIC_PUZZLES = [
         4
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p038",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p038",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -12416,9 +12416,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p039",
     "mode": "color",
     "size": 15,
-    "title": "波といかり",
-    "description": "波といかり",
-    "category": "海",
+    "title": "Anchor And Wave",
+    "description": "anchor and wave",
+    "category": "sea",
     "localized": {
       "ja": {
         "title": "波といかり",
@@ -12840,8 +12840,8 @@ window.COLORING_LOGIC_PUZZLES = [
         6
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p039",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p039",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -12921,9 +12921,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p040",
     "mode": "color",
     "size": 15,
-    "title": "どんぐりとオークの葉",
-    "description": "どんぐりとオークの葉",
-    "category": "森",
+    "title": "Acorn And Oak Leaf",
+    "description": "acorn and oak leaf",
+    "category": "forest",
     "localized": {
       "ja": {
         "title": "どんぐりとオークの葉",
@@ -13345,8 +13345,8 @@ window.COLORING_LOGIC_PUZZLES = [
         10
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p040",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p040",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -13426,9 +13426,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p041",
     "mode": "color",
     "size": 15,
-    "title": "雲と月うさぎ",
-    "description": "雲と月うさぎ",
-    "category": "夜",
+    "title": "Moon Rabbit And Clouds",
+    "description": "moon rabbit and clouds",
+    "category": "night",
     "localized": {
       "ja": {
         "title": "雲と月うさぎ",
@@ -13850,8 +13850,8 @@ window.COLORING_LOGIC_PUZZLES = [
         0
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p041",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p041",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -13931,9 +13931,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p042",
     "mode": "color",
     "size": 15,
-    "title": "さくらんぼのカップケーキ",
-    "description": "さくらんぼのカップケーキ",
-    "category": "スイーツ",
+    "title": "Cherry Cupcake",
+    "description": "cherry cupcake",
+    "category": "sweet",
     "localized": {
       "ja": {
         "title": "さくらんぼのカップケーキ",
@@ -14355,8 +14355,8 @@ window.COLORING_LOGIC_PUZZLES = [
         8
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p042",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p042",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -14436,9 +14436,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p043",
     "mode": "color",
     "size": 15,
-    "title": "波を跳ぶイルカ",
-    "description": "波を跳ぶイルカ",
-    "category": "海",
+    "title": "Dolphin Jumping Over Waves",
+    "description": "dolphin jumping over waves",
+    "category": "ocean",
     "localized": {
       "ja": {
         "title": "波を跳ぶイルカ",
@@ -14860,8 +14860,8 @@ window.COLORING_LOGIC_PUZZLES = [
         7
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p043",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p043",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -14941,9 +14941,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p044",
     "mode": "color",
     "size": 15,
-    "title": "切り株と新芽",
-    "description": "切り株と新芽",
-    "category": "森",
+    "title": "Tree Stump And Sprout",
+    "description": "tree stump and sprout",
+    "category": "forest",
     "localized": {
       "ja": {
         "title": "切り株と新芽",
@@ -15365,8 +15365,8 @@ window.COLORING_LOGIC_PUZZLES = [
         9
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p044",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p044",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -15446,9 +15446,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p045",
     "mode": "color",
     "size": 15,
-    "title": "太陽と小さな丘",
-    "description": "太陽と小さな丘",
-    "category": "風景",
+    "title": "Sun And Small Hills",
+    "description": "sun and small hills",
+    "category": "simple landscape",
     "localized": {
       "ja": {
         "title": "太陽と小さな丘",
@@ -15870,8 +15870,8 @@ window.COLORING_LOGIC_PUZZLES = [
         0
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p045",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p045",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -15951,9 +15951,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p046",
     "mode": "color",
     "size": 15,
-    "title": "月夜の灯台",
-    "description": "月夜の灯台",
-    "category": "夜の海",
+    "title": "Night Lighthouse And Moon",
+    "description": "night lighthouse and moon",
+    "category": "ocean night",
     "localized": {
       "ja": {
         "title": "月夜の灯台",
@@ -16375,8 +16375,8 @@ window.COLORING_LOGIC_PUZZLES = [
         0
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p046",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p046",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -16456,9 +16456,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p047",
     "mode": "color",
     "size": 15,
-    "title": "どんぐりを持つリス",
-    "description": "どんぐりを持つリス",
-    "category": "森",
+    "title": "Squirrel With An Acorn",
+    "description": "squirrel with an acorn",
+    "category": "forest",
     "localized": {
       "ja": {
         "title": "どんぐりを持つリス",
@@ -16880,8 +16880,8 @@ window.COLORING_LOGIC_PUZZLES = [
         0
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p047",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p047",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -16961,9 +16961,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p048",
     "mode": "color",
     "size": 15,
-    "title": "桜の傘",
-    "description": "桜の傘",
-    "category": "春の雨",
+    "title": "Sakura Umbrella",
+    "description": "sakura umbrella",
+    "category": "spring rain",
     "localized": {
       "ja": {
         "title": "桜の傘",
@@ -17385,8 +17385,8 @@ window.COLORING_LOGIC_PUZZLES = [
         6
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p048",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p048",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -17466,9 +17466,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p049",
     "mode": "color",
     "size": 15,
-    "title": "星と焚き火",
-    "description": "星と焚き火",
-    "category": "夜",
+    "title": "Campfire And Stars",
+    "description": "campfire and stars",
+    "category": "night",
     "localized": {
       "ja": {
         "title": "星と焚き火",
@@ -17890,8 +17890,8 @@ window.COLORING_LOGIC_PUZZLES = [
         0
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p049",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p049",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -17971,9 +17971,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p050",
     "mode": "color",
     "size": 15,
-    "title": "サンゴとウミガメ",
-    "description": "サンゴとウミガメ",
-    "category": "海",
+    "title": "Sea Turtle And Coral",
+    "description": "sea turtle and coral",
+    "category": "ocean",
     "localized": {
       "ja": {
         "title": "サンゴとウミガメ",
@@ -18395,8 +18395,8 @@ window.COLORING_LOGIC_PUZZLES = [
         0
       ]
     ],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p050",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p050",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -18476,9 +18476,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p051",
     "mode": "color",
     "size": 15,
-    "title": "月と森のフクロウ",
-    "description": "月と森のフクロウ",
-    "category": "夜の森",
+    "title": "Forest Owl And Moon",
+    "description": "forest owl and moon",
+    "category": "forest night",
     "localized": {
       "ja": {
         "title": "月と森のフクロウ",
@@ -18895,8 +18895,8 @@ window.COLORING_LOGIC_PUZZLES = [
       ]
     ],
     "givens": [],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p051",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p051",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -18976,9 +18976,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p052",
     "mode": "color",
     "size": 15,
-    "title": "花瓶のバラ",
-    "description": "花瓶のバラ",
-    "category": "花",
+    "title": "Rose In A Simple Vase",
+    "description": "rose in a simple vase",
+    "category": "flower",
     "localized": {
       "ja": {
         "title": "花瓶のバラ",
@@ -19395,8 +19395,8 @@ window.COLORING_LOGIC_PUZZLES = [
       ]
     ],
     "givens": [],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p052",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p052",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -19476,9 +19476,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p053",
     "mode": "color",
     "size": 15,
-    "title": "煙の出る山小屋",
-    "description": "煙の出る山小屋",
-    "category": "森",
+    "title": "Mountain Cabin And Smoke",
+    "description": "mountain cabin and smoke",
+    "category": "forest",
     "localized": {
       "ja": {
         "title": "煙の出る山小屋",
@@ -19895,8 +19895,8 @@ window.COLORING_LOGIC_PUZZLES = [
       ]
     ],
     "givens": [],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p053",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p053",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -19976,9 +19976,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p054",
     "mode": "color",
     "size": 15,
-    "title": "三日月とロケット",
-    "description": "三日月とロケット",
-    "category": "宇宙",
+    "title": "Rocket And Crescent Moon",
+    "description": "rocket and crescent moon",
+    "category": "space",
     "localized": {
       "ja": {
         "title": "三日月とロケット",
@@ -20395,8 +20395,8 @@ window.COLORING_LOGIC_PUZZLES = [
       ]
     ],
     "givens": [],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p054",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p054",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -20476,9 +20476,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p055",
     "mode": "color",
     "size": 15,
-    "title": "泡と金魚鉢",
-    "description": "泡と金魚鉢",
-    "category": "水辺",
+    "title": "Fish Bowl And Bubbles",
+    "description": "fish bowl and bubbles",
+    "category": "water",
     "localized": {
       "ja": {
         "title": "泡と金魚鉢",
@@ -20503,12 +20503,32 @@ window.COLORING_LOGIC_PUZZLES = [
     "initialRevealRate": 0.15,
     "initialReveals": [
       [
+        12,
+        1
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        11,
+        7
+      ],
+      [
         5,
         4
       ],
       [
+        13,
+        10
+      ],
+      [
         6,
         2
+      ],
+      [
+        0,
+        14
       ],
       [
         2,
@@ -20519,12 +20539,16 @@ window.COLORING_LOGIC_PUZZLES = [
         10
       ],
       [
-        3,
-        11
+        13,
+        13
       ],
       [
-        3,
-        7
+        5,
+        14
+      ],
+      [
+        2,
+        1
       ],
       [
         6,
@@ -20535,12 +20559,48 @@ window.COLORING_LOGIC_PUZZLES = [
         4
       ],
       [
+        4,
+        3
+      ],
+      [
+        8,
+        11
+      ],
+      [
+        0,
+        13
+      ],
+      [
+        8,
+        13
+      ],
+      [
         8,
         10
       ],
       [
-        3,
-        8
+        5,
+        1
+      ],
+      [
+        10,
+        0
+      ],
+      [
+        7,
+        13
+      ],
+      [
+        4,
+        14
+      ],
+      [
+        1,
+        13
+      ],
+      [
+        4,
+        13
       ],
       [
         7,
@@ -20551,87 +20611,27 @@ window.COLORING_LOGIC_PUZZLES = [
         2
       ],
       [
+        11,
+        9
+      ],
+      [
+        7,
+        0
+      ],
+      [
         9,
         7
       ],
       [
-        5,
-        11
-      ],
-      [
-        10,
-        6
-      ],
-      [
-        4,
-        6
-      ],
-      [
-        6,
-        9
-      ],
-      [
-        6,
-        7
-      ],
-      [
-        5,
-        8
-      ],
-      [
-        5,
-        7
-      ],
-      [
-        8,
-        8
-      ],
-      [
-        4,
-        7
-      ],
-      [
-        5,
+        12,
         10
       ],
       [
-        3,
-        10
-      ],
-      [
-        10,
-        9
-      ],
-      [
-        3,
-        9
-      ],
-      [
-        4,
-        9
-      ],
-      [
-        10,
+        2,
         10
       ],
       [
         5,
-        6
-      ],
-      [
-        5,
-        3
-      ],
-      [
-        4,
-        10
-      ],
-      [
-        6,
-        11
-      ],
-      [
-        4,
         11
       ]
     ],
@@ -20639,57 +20639,59 @@ window.COLORING_LOGIC_PUZZLES = [
     "lineArtImage": "assets/line_art/p055.png",
     "solution": [
       [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
       ],
       [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1
       ],
       [
+        1,
+        1,
+        1,
         0,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
         0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        4,
-        4,
-        0,
-        0,
-        0,
-        0,
-        0
+        1,
+        1,
+        1
       ],
       [
+        1,
+        1,
         0,
         0,
         0,
@@ -20697,36 +20699,83 @@ window.COLORING_LOGIC_PUZZLES = [
         0,
         0,
         0,
-        4,
-        4,
-        4,
-        4,
-        4,
         0,
         0,
-        0
+        0,
+        0,
+        1,
+        1
       ],
       [
+        1,
+        2,
+        3,
+        3,
         0,
+        3,
+        3,
         0,
+        3,
         0,
+        3,
+        3,
         0,
-        0,
-        0,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        0,
-        0,
-        0
+        2,
+        1
       ],
       [
-        0,
-        0,
-        0,
+        1,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        1
+      ],
+      [
+        1,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        2,
+        3,
+        3,
+        3,
+        3,
+        1
+      ],
+      [
+        1,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4,
+        4,
+        3,
+        2,
+        2,
+        3,
+        1
+      ],
+      [
+        1,
         3,
         3,
         0,
@@ -20736,167 +20785,118 @@ window.COLORING_LOGIC_PUZZLES = [
         4,
         4,
         4,
-        0,
-        0,
-        0
+        4,
+        4,
+        2,
+        3,
+        1
       ],
       [
-        0,
-        0,
-        2,
-        2,
-        2,
-        2,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        0,
-        0,
-        0
-      ],
-      [
-        0,
-        0,
-        2,
-        2,
-        2,
+        1,
+        3,
         3,
         3,
         4,
         4,
         4,
         4,
-        0,
-        0,
-        0,
-        0
+        4,
+        4,
+        4,
+        4,
+        3,
+        3,
+        1
       ],
       [
-        0,
-        0,
+        1,
         2,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4,
+        4,
+        3,
+        4,
+        4,
+        2,
+        1
+      ],
+      [
+        1,
+        1,
+        3,
+        3,
+        3,
+        3,
+        2,
+        4,
         2,
         3,
         3,
         3,
         3,
         1,
-        1,
-        1,
-        0,
-        0,
-        0,
-        0
+        1
       ],
       [
-        0,
-        0,
-        2,
+        1,
+        1,
+        1,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
         2,
         3,
         3,
         3,
         3,
-        2,
-        1,
-        1,
-        0,
-        0,
-        0,
-        0
-      ],
-      [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        3,
         2,
         1,
         1,
         1,
-        2,
-        0,
-        0,
-        0,
-        0
+        1
       ],
       [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        2,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
       ]
     ],
     "givens": [],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p055",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p055",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -20976,9 +20976,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p056",
     "mode": "color",
     "size": 15,
-    "title": "紅葉とランタン",
-    "description": "紅葉とランタン",
-    "category": "秋",
+    "title": "Maple Leaf And Lantern",
+    "description": "maple leaf and lantern",
+    "category": "autumn",
     "localized": {
       "ja": {
         "title": "紅葉とランタン",
@@ -21003,400 +21003,400 @@ window.COLORING_LOGIC_PUZZLES = [
     "initialRevealRate": 0.15,
     "initialReveals": [
       [
+        13,
+        14
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        10,
+        0
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        13,
+        11
+      ],
+      [
+        13,
+        4
+      ],
+      [
+        4,
+        12
+      ],
+      [
         6,
         5
+      ],
+      [
+        12,
+        3
+      ],
+      [
+        5,
+        13
+      ],
+      [
+        6,
+        12
       ],
       [
         4,
         3
       ],
       [
-        8,
-        3
-      ],
-      [
-        9,
-        6
-      ],
-      [
-        11,
-        5
-      ],
-      [
-        10,
-        4
-      ],
-      [
-        8,
+        14,
         8
       ],
       [
-        9,
+        5,
+        14
+      ],
+      [
+        0,
         5
       ],
       [
-        9,
-        7
-      ],
-      [
-        7,
-        8
-      ],
-      [
-        7,
-        5
-      ],
-      [
-        6,
-        3
-      ],
-      [
-        7,
-        3
-      ],
-      [
-        9,
-        8
-      ],
-      [
-        6,
+        13,
         9
       ],
       [
-        9,
-        10
-      ],
-      [
-        9,
-        3
-      ],
-      [
-        7,
+        13,
         6
       ],
       [
-        10,
-        2
-      ],
-      [
-        10,
-        12
-      ],
-      [
-        9,
-        9
-      ],
-      [
-        8,
+        2,
         11
       ],
       [
-        6,
+        12,
         10
       ],
       [
-        6,
-        4
-      ],
-      [
-        5,
-        3
-      ],
-      [
-        10,
-        8
-      ],
-      [
-        5,
-        4
-      ],
-      [
-        9,
-        4
-      ],
-      [
-        11,
-        2
-      ],
-      [
-        6,
-        2
-      ],
-      [
-        5,
-        5
+        0,
+        14
       ],
       [
         8,
+        3
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        12,
         5
       ],
       [
-        10,
-        5
+        12,
+        13
+      ],
+      [
+        3,
+        14
+      ],
+      [
+        11,
+        9
+      ],
+      [
+        4,
+        13
+      ],
+      [
+        9,
+        6
+      ],
+      [
+        12,
+        6
+      ],
+      [
+        14,
+        9
+      ],
+      [
+        0,
+        12
+      ],
+      [
+        0,
+        1
       ]
     ],
     "sourceImage": "assets/source/p056.png",
     "lineArtImage": "assets/line_art/p056.png",
     "solution": [
       [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      [
-        0,
-        0,
-        0,
-        3,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      [
-        0,
-        0,
         1,
         1,
         1,
         1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
       ],
       [
-        0,
-        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
         2,
         1,
         1,
         2,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
+        1,
+        2,
+        1,
+        1,
+        1
       ],
       [
-        0,
-        0,
+        1,
+        1,
+        1,
+        1,
         2,
         2,
         2,
+        1,
+        1,
         2,
-        2,
-        2,
-        0,
         3,
-        4,
-        0,
-        0,
-        0,
-        0
+        2,
+        1,
+        1,
+        1
       ],
       [
-        0,
-        0,
+        1,
+        1,
+        1,
+        1,
         2,
         2,
         2,
+        1,
         2,
-        2,
-        2,
-        4,
         3,
         3,
-        0,
-        0,
-        0,
-        0
+        3,
+        1,
+        1,
+        1
       ],
       [
-        0,
-        0,
+        1,
         2,
         2,
         2,
         2,
+        2,
+        2,
+        2,
         3,
-        4,
         3,
         3,
         3,
         3,
-        0,
-        0,
-        0
+        2,
+        1
       ],
       [
-        0,
-        0,
+        1,
         2,
         2,
         2,
-        3,
-        4,
-        4,
-        4,
-        3,
-        3,
-        3,
-        4,
-        0,
-        0
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1
       ],
       [
-        0,
-        0,
+        1,
         2,
         2,
         2,
         2,
-        4,
-        4,
-        4,
+        2,
+        2,
+        2,
+        2,
         3,
         3,
-        3,
-        3,
-        0,
-        0
+        2,
+        2,
+        1,
+        1
       ],
       [
-        0,
-        0,
-        3,
-        3,
-        3,
-        3,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
         4,
         4,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
+        4,
+        2,
+        1,
+        1
       ],
       [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        2,
+        4,
+        2,
+        1,
+        1
       ],
       [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        2,
+        3,
+        2,
+        1,
+        1
       ],
       [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        3,
+        2,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3,
+        3,
+        3,
+        3,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        3,
+        3,
+        3,
+        3,
+        3,
+        2,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
       ]
     ],
     "givens": [],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p056",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p056",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -21476,9 +21476,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p057",
     "mode": "color",
     "size": 15,
-    "title": "窓辺で眠る猫",
-    "description": "窓辺で眠る猫",
-    "category": "夜の日常",
+    "title": "Sleeping Cat And Window",
+    "description": "sleeping cat and window",
+    "category": "cozy night",
     "localized": {
       "ja": {
         "title": "窓辺で眠る猫",
@@ -21895,8 +21895,8 @@ window.COLORING_LOGIC_PUZZLES = [
       ]
     ],
     "givens": [],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p057",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p057",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -21976,9 +21976,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p058",
     "mode": "color",
     "size": 15,
-    "title": "蓮の葉と大きな鯉",
-    "description": "蓮の葉と大きな鯉",
-    "category": "水辺の庭",
+    "title": "Large Koi And Lotus Leaf",
+    "description": "large koi and lotus leaf",
+    "category": "water garden",
     "localized": {
       "ja": {
         "title": "蓮の葉と大きな鯉",
@@ -22395,8 +22395,8 @@ window.COLORING_LOGIC_PUZZLES = [
       ]
     ],
     "givens": [],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p058",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p058",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -22476,9 +22476,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p059",
     "mode": "color",
     "size": 15,
-    "title": "桜の鳥小屋",
-    "description": "桜の鳥小屋",
-    "category": "春",
+    "title": "Sakura Birdhouse",
+    "description": "sakura birdhouse",
+    "category": "spring",
     "localized": {
       "ja": {
         "title": "桜の鳥小屋",
@@ -22895,8 +22895,8 @@ window.COLORING_LOGIC_PUZZLES = [
       ]
     ],
     "givens": [],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p059",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p059",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
@@ -22976,9 +22976,9 @@ window.COLORING_LOGIC_PUZZLES = [
     "id": "p060",
     "mode": "color",
     "size": 15,
-    "title": "深い森の狐のシルエット",
-    "description": "深い森の狐のシルエット",
-    "category": "森",
+    "title": "Deep Forest Fox Silhouette",
+    "description": "deep forest fox silhouette",
+    "category": "forest",
     "localized": {
       "ja": {
         "title": "深い森の狐のシルエット",
@@ -23395,8 +23395,8 @@ window.COLORING_LOGIC_PUZZLES = [
       ]
     ],
     "givens": [],
-    "web_url": "https://example.github.io/coloring-logic/vol001/?p=p060",
-    "pdf_url": "https://example.github.io/coloring-logic/vol001/pdf/",
+    "web_url": "https://logicgames.site/revealo/?p=p060",
+    "pdf_url": "https://logicgames.site/revealo/pdf/",
     "access_code": "CL-VOL1-2026",
     "palette": [
       {
