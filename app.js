@@ -1129,7 +1129,8 @@ async function shareResult() {
 }
 
 function shareUrl() {
-  return `${location.origin}${location.pathname}?p=${encodeURIComponent(puzzle.id)}`;
+  const base = location.pathname.endsWith("/") ? location.href : new URL("./", location.href).href;
+  return new URL(`puzzles/${encodeURIComponent(puzzle.id)}/`, base).href;
 }
 
 async function copyResult() {
