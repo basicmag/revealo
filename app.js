@@ -137,6 +137,9 @@ const puzzles = window.COLORING_LOGIC_PUZZLES ?? builtInPuzzles;
 const storagePrefix = "coloring-logic-pwa-progress:";
 const sequenceKey = "coloring-logic-pwa-current";
 const toolDefaultsKey = "revealo-tool-defaults";
+const tutorialKey = "revealo-tutorial";
+const tutorialVersion = 1;
+const dailyStoragePrefix = "revealo-daily-progress:";
 const appLocale = (navigator.language || navigator.userLanguage || "en").toLowerCase().startsWith("ja") ? "ja" : "en";
 document.documentElement.lang = appLocale;
 const UI_TEXT = {
@@ -144,6 +147,9 @@ const UI_TEXT = {
     appTitle: "リビーロ",
     appSubtitle: "絵あてロジック",
     selectPuzzle: "パズルを選択",
+    dailyChallenge: "今日のチャレンジ",
+    dailyChallengeDesc: date => `${date} の日替わりパズル`,
+    dailyCleared: "今日のチャレンジクリア済み",
     completed: "クリア済み",
     progress: percent => `進捗 ${percent}%`,
     notPlayed: "未プレイ",
@@ -181,12 +187,29 @@ const UI_TEXT = {
     help1: "行と列のヒントを見て、マスを空白・塗り色で埋めます。",
     help2: "白黒モードでは、グレーと黒の2色を使います。カラーモードでは、指定されたパレットの色を使います。",
     help3: "ヒントは、同じ色が何マス連続するかを表します。空白は表示されません。",
-    help4: "画像付きパズルでは、未入力セルの一部に下絵が表示され、正解セルを塗るたびに新しい下絵セルが開示されます。"
+    help4: "画像付きパズルでは、未入力セルの一部に下絵が表示され、正解セルを塗るたびに新しい下絵セルが開示されます。",
+    tutorialReplay: "チュートリアルを見る",
+    tutorialKicker: "Tutorial",
+    tutorialTitle: "リビーロへようこそ",
+    tutorialSkip: "スキップ",
+    tutorialPrev: "戻る",
+    tutorialNext: "次へ",
+    tutorialDone: "ゲームを始める",
+    tutorialSteps: [
+      ["ヒントを読む", "行と列の数字は、同じ色が連続するマス数です。色チップの数字と位置を見て盤面を推理します。"],
+      ["色を選んで塗る", "下の丸いパレットから色や消しゴムを選び、マスをタップまたはドラッグして塗ります。"],
+      ["困ったら確認", "チェックで今のミスを確認し、ヒントで正解セルを1つ開けます。元に戻るで直前の操作を戻せます。"],
+      ["何の絵？に挑戦", "途中で絵が分かったら「何の絵？」から答えを選びます。早く当てるほど記録になります。"],
+      ["クリア後", "クリアすると答えと元画像が表示され、結果を共有できます。"]
+    ]
   },
   en: {
     appTitle: "Revealo",
     appSubtitle: "Picture Reveal Logic",
     selectPuzzle: "Select a Puzzle",
+    dailyChallenge: "Daily Challenge",
+    dailyChallengeDesc: date => `Daily puzzle for ${date}`,
+    dailyCleared: "Daily Challenge Completed",
     completed: "Completed",
     progress: percent => `Progress ${percent}%`,
     notPlayed: "Not played",
@@ -224,10 +247,28 @@ const UI_TEXT = {
     help1: "Use the row and column clues to fill each cell with blank or the correct color.",
     help2: "Mono puzzles use gray and black. Color puzzles use the specified palette.",
     help3: "Each clue shows how many consecutive cells of the same color appear. Blank cells are not shown.",
-    help4: "Image puzzles reveal some guide cells at the start, then reveal another guide cell whenever you fill a correct cell."
+    help4: "Image puzzles reveal some guide cells at the start, then reveal another guide cell whenever you fill a correct cell.",
+    tutorialReplay: "Tutorial",
+    tutorialKicker: "Tutorial",
+    tutorialTitle: "Welcome to Revealo",
+    tutorialSkip: "Skip",
+    tutorialPrev: "Back",
+    tutorialNext: "Next",
+    tutorialDone: "Start Playing",
+    tutorialSteps: [
+      ["Read the clues", "Row and column clues show runs of the same color. Use the number and chip position to reason through the board."],
+      ["Pick a color", "Choose a color or eraser from the round palette, then tap or drag across cells to fill them."],
+      ["Use tools", "Check finds current mistakes, Hint reveals one correct cell, and Undo reverses your last move."],
+      ["Guess the picture", "When you know what the image is, choose an answer from What Picture? Earlier guesses become part of your result."],
+      ["After clearing", "When the puzzle is complete, the answer and original image are revealed and you can share your result."]
+    ]
   }
 };
 const ui = UI_TEXT[appLocale];
+let tutorialStepIndex = 0;
+let pendingStartupPuzzleId = null;
+let currentPlayMode = "normal";
+let currentDailyDate = null;
 
 let puzzle = null;
 let selected = 0;
@@ -511,13 +552,28 @@ function emptyBoard(size) {
   return Array.from({ length: size }, () => Array(size).fill(null));
 }
 
-function storageKey(puzzleId) {
+function localDateKey(date = new Date()) {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
+function dailyPuzzleForDate(dateKey = localDateKey()) {
+  const sorted = puzzlesById();
+  if (!sorted.length) return null;
+  const index = Math.floor(seededRatio(`revealo-daily:${dateKey}`) * sorted.length) % sorted.length;
+  return sorted[index];
+}
+
+function storageKey(puzzleId, mode = currentPlayMode, dateKey = currentDailyDate) {
+  if (mode === "daily" && dateKey) return `${dailyStoragePrefix}${dateKey}:${puzzleId}`;
   return storagePrefix + puzzleId;
 }
 
-function loadProgress(puzzleId) {
+function loadProgress(puzzleId, mode = currentPlayMode, dateKey = currentDailyDate) {
   try {
-    const raw = localStorage.getItem(storageKey(puzzleId));
+    const raw = localStorage.getItem(storageKey(puzzleId, mode, dateKey));
     return raw ? JSON.parse(raw) : null;
   } catch {
     return null;
@@ -534,6 +590,8 @@ function saveProgress() {
   localStorage.setItem(storageKey(puzzle.id), JSON.stringify({
     schemaVersion: 2,
     puzzleId: puzzle.id,
+    playMode: currentPlayMode,
+    dailyDate: currentDailyDate,
     board,
     miss,
     hintsUsed,
@@ -553,11 +611,28 @@ function renderPuzzleSelect() {
   const select = document.getElementById("puzzleSelect");
   select.innerHTML = `<h2>${ui.selectPuzzle}</h2>`;
 
+  const dateKey = localDateKey();
+  const dailyPuzzle = dailyPuzzleForDate(dateKey);
+  if (dailyPuzzle) {
+    const dailySaved = loadProgress(dailyPuzzle.id, "daily", dateKey);
+    const dailyPercent = progressFor(dailyPuzzle, boardFromProgress(dailySaved, dailyPuzzle));
+    const dailyButton = document.createElement("button");
+    dailyButton.className = "daily-card";
+    dailyButton.innerHTML = `
+      <span class="daily-card-kicker">${ui.dailyChallenge}</span>
+      <span class="daily-card-title">${puzzlePublicTitle(dailyPuzzle)}</span>
+      <span class="daily-card-desc">${dailySaved?.completed ? ui.dailyCleared : ui.dailyChallengeDesc(dateKey)}</span>
+      <span class="daily-card-status">${dailySaved?.completed ? ui.completed : dailyPercent > 0 ? ui.progress(dailyPercent) : ui.notPlayed}</span>
+    `;
+    dailyButton.onclick = () => startPuzzle(dailyPuzzle.id, { mode: "daily", dateKey });
+    select.appendChild(dailyButton);
+  }
+
   const list = document.createElement("div");
   list.className = "puzzle-list";
 
   puzzles.forEach(item => {
-    const saved = loadProgress(item.id);
+    const saved = loadProgress(item.id, "normal", null);
     const percent = progressFor(item, boardFromProgress(saved, item));
     const status = saved?.completed ? ui.completed : percent > 0 ? ui.progress(percent) : ui.notPlayed;
     const button = document.createElement("button");
@@ -568,17 +643,20 @@ function renderPuzzleSelect() {
       <span class="puzzle-item-meta">${item.difficulty} / ${item.size}x${item.size} / ${item.theme}${isColorPuzzle(item) ? " / Color" : ""}</span>
       <span class="puzzle-item-status">${status}</span>
     `;
-    button.onclick = () => startPuzzle(item.id);
+    button.onclick = () => startPuzzle(item.id, { mode: "normal" });
     list.appendChild(button);
   });
 
   select.appendChild(list);
 }
 
-function startPuzzle(puzzleId) {
+function startPuzzle(puzzleId, options = {}) {
   if (puzzle) saveProgress();
 
+  currentPlayMode = options.mode ?? "normal";
+  currentDailyDate = currentPlayMode === "daily" ? (options.dateKey ?? localDateKey()) : null;
   puzzle = puzzles.find(item => item.id === puzzleId);
+  if (!puzzle) return;
   localStorage.setItem(sequenceKey, puzzle.id);
   const saved = loadProgress(puzzle.id);
   selected = saved?.selected ?? 0;
@@ -600,7 +678,8 @@ function startPuzzle(puzzleId) {
   updatePuzzleLayoutMetrics();
   document.getElementById("puzzleTitle").textContent = completed ? puzzleAnswerTitle(puzzle) : puzzlePublicTitle(puzzle);
   document.getElementById("puzzleDesc").textContent = completed ? puzzleAnswerDescription(puzzle) : categoryText(puzzle);
-  document.getElementById("puzzleMeta").textContent = `${puzzle.createdAt} / ${puzzle.difficulty} / ${puzzle.size}x${puzzle.size}${isColorPuzzle() ? " / Color" : ""}`;
+  const modeLabel = currentPlayMode === "daily" ? `${ui.dailyChallenge} / ` : "";
+  document.getElementById("puzzleMeta").textContent = `${modeLabel}${puzzle.createdAt} / ${puzzle.difficulty} / ${puzzle.size}x${puzzle.size}${isColorPuzzle() ? " / Color" : ""}`;
   document.getElementById("puzzleSelect").classList.add("hidden");
   document.getElementById("imageTool").classList.add("hidden");
   document.getElementById("gameView").classList.remove("hidden");
@@ -613,6 +692,8 @@ function startPuzzle(puzzleId) {
 function showPuzzleSelect() {
   saveProgress();
   puzzle = null;
+  currentPlayMode = "normal";
+  currentDailyDate = null;
   delete document.documentElement.dataset.boardSize;
   document.getElementById("gameView").classList.add("hidden");
   document.getElementById("puzzleSelect").classList.remove("hidden");
@@ -1097,7 +1178,7 @@ function shareText(locale = appLocale) {
   const url = shareUrl();
   if (locale === "en") {
     return [
-      `Revealo #${number}`,
+      `#Revealo #${number}`,
       `Guessed at ${reveal} Reveal`,
       `${noHint ? ui.noHint : ui.hintCount(hintsUsed)} | ${ui.missCount(miss)} | ${ui.streak}`,
       "",
@@ -1105,7 +1186,7 @@ function shareText(locale = appLocale) {
     ].join("\n");
   }
   return [
-    `Revealo #${number}`,
+    `#Revealo #${number}`,
     ui.guessedAt(reveal),
     `${noHint ? ui.noHint : ui.hintCount(hintsUsed)} | ${ui.missCount(miss)} | ${ui.streak}`,
     "",
@@ -1150,6 +1231,77 @@ async function copyResult() {
   }
 }
 
+function tutorialState() {
+  try {
+    return JSON.parse(localStorage.getItem(tutorialKey) || "{}");
+  } catch {
+    return {};
+  }
+}
+
+function isTutorialCompleted() {
+  return tutorialState().version >= tutorialVersion;
+}
+
+function saveTutorialCompleted(skipped = false) {
+  localStorage.setItem(tutorialKey, JSON.stringify({
+    version: tutorialVersion,
+    completedAt: new Date().toISOString(),
+    skipped
+  }));
+}
+
+function renderTutorialStep() {
+  const steps = ui.tutorialSteps;
+  const [title, body] = steps[tutorialStepIndex];
+  const setText = (id, text) => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = text;
+  };
+  setText("tutorialKicker", ui.tutorialKicker);
+  setText("tutorialTitle", ui.tutorialTitle);
+  setText("tutorialStepIcon", String(tutorialStepIndex + 1));
+  setText("tutorialStepTitle", title);
+  setText("tutorialStepBody", body);
+  setText("tutorialSkipBtn", ui.tutorialSkip);
+  setText("tutorialPrevBtn", ui.tutorialPrev);
+  setText("tutorialNextBtn", tutorialStepIndex === steps.length - 1 ? ui.tutorialDone : ui.tutorialNext);
+  const prev = document.getElementById("tutorialPrevBtn");
+  if (prev) prev.disabled = tutorialStepIndex === 0;
+  const dots = document.getElementById("tutorialDots");
+  if (dots) {
+    dots.innerHTML = steps.map((_, index) =>
+      `<span class="tutorial-dot${index === tutorialStepIndex ? " active" : ""}"></span>`
+    ).join("");
+  }
+}
+
+function openTutorialDialog() {
+  tutorialStepIndex = 0;
+  renderTutorialStep();
+  document.getElementById("tutorialDialog")?.showModal();
+}
+
+function finishTutorial(skipped = false) {
+  saveTutorialCompleted(skipped);
+  document.getElementById("tutorialDialog")?.close();
+  const puzzleId = pendingStartupPuzzleId;
+  pendingStartupPuzzleId = null;
+  if (puzzleId && !puzzle) startPuzzle(puzzleId);
+}
+
+function startInitialPuzzleWithTutorial() {
+  pendingStartupPuzzleId = initialPuzzleId();
+  if (!pendingStartupPuzzleId) return;
+  if (isTutorialCompleted()) {
+    const puzzleId = pendingStartupPuzzleId;
+    pendingStartupPuzzleId = null;
+    startPuzzle(puzzleId);
+    return;
+  }
+  openTutorialDialog();
+}
+
 function applyLocaleText() {
   document.title = ui.appTitle;
   const headerTitle = document.querySelector(".header h1");
@@ -1170,6 +1322,7 @@ function applyLocaleText() {
   setText("clearBackBtn", ui.back);
   setText("closeClear", ui.close);
   setText("closeHelp", ui.close);
+  setText("openTutorialBtn", ui.tutorialReplay);
   setText("closeGuess", ui.close);
   setText("guessDialogTitle", ui.guessDialogTitle);
   setText("guessDialogPrompt", ui.guessPrompt);
@@ -1829,6 +1982,24 @@ document.getElementById("copySolutionBtn").onclick = async () => {
 };
 document.getElementById("helpBtn").onclick = () => document.getElementById("helpDialog").showModal();
 document.getElementById("closeHelp").onclick = () => document.getElementById("helpDialog").close();
+document.getElementById("openTutorialBtn").onclick = () => {
+  document.getElementById("helpDialog").close();
+  openTutorialDialog();
+};
+document.getElementById("tutorialSkipBtn").onclick = () => finishTutorial(true);
+document.getElementById("tutorialPrevBtn").onclick = () => {
+  tutorialStepIndex = Math.max(0, tutorialStepIndex - 1);
+  renderTutorialStep();
+};
+document.getElementById("tutorialNextBtn").onclick = () => {
+  if (tutorialStepIndex >= ui.tutorialSteps.length - 1) {
+    finishTutorial(false);
+    return;
+  }
+  tutorialStepIndex += 1;
+  renderTutorialStep();
+};
+document.getElementById("tutorialDialog").addEventListener("cancel", event => event.preventDefault());
 document.getElementById("closeClear").onclick = () => document.getElementById("clearDialog").close();
 document.getElementById("closeGuess").onclick = () => document.getElementById("guessDialog").close();
 document.getElementById("guessBtn").onclick = openGuessDialog;
@@ -1860,4 +2031,4 @@ applyLocaleText();
 loadToolDefaults();
 generateImagePrompt();
 renderPuzzleSelect();
-startPuzzle(initialPuzzleId());
+startInitialPuzzleWithTutorial();

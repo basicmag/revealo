@@ -186,7 +186,26 @@
     <p>白黒モードでは、グレーと黒の2色を使います。カラーモードでは、指定されたパレットの色を使います。</p>
     <p>ヒントは、同じ色が何マス連続するかを表します。空白は表示されません。</p>
     <p>画像付きパズルでは、未入力セルに薄い線画が表示され、正解セルは元画像の同じ位置に置き換わります。クリア後は盤面全体に元画像が表示されます。</p>
+    <button id="openTutorialBtn">チュートリアルを見る</button>
     <button id="closeHelp">閉じる</button>
+  </dialog>
+
+  <dialog id="tutorialDialog" class="tutorial-dialog">
+    <div class="tutorial-head">
+      <p id="tutorialKicker">Tutorial</p>
+      <h3 id="tutorialTitle">リビーロへようこそ</h3>
+    </div>
+    <div class="tutorial-body">
+      <div id="tutorialStepIcon" class="tutorial-icon">1</div>
+      <h4 id="tutorialStepTitle"></h4>
+      <p id="tutorialStepBody"></p>
+      <div id="tutorialDots" class="tutorial-dots" aria-hidden="true"></div>
+    </div>
+    <div class="tutorial-actions">
+      <button id="tutorialSkipBtn">スキップ</button>
+      <button id="tutorialPrevBtn">戻る</button>
+      <button id="tutorialNextBtn">次へ</button>
+    </div>
   </dialog>
 
   <script src="./puzzles.js"></script>

@@ -228,6 +228,47 @@ h1 {
   gap: 12px;
 }
 
+.daily-card {
+  width: 100%;
+  border: 0;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #111827, #2563eb);
+  color: #fff;
+  padding: 18px;
+  text-align: left;
+  display: grid;
+  gap: 7px;
+  margin-bottom: 14px;
+  box-shadow: 0 18px 45px rgba(37, 99, 235, .24);
+}
+
+.daily-card-kicker {
+  color: #bfdbfe;
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.daily-card-title {
+  font-size: 24px;
+  font-weight: 950;
+}
+
+.daily-card-desc {
+  color: #e5edff;
+  font-weight: 750;
+}
+
+.daily-card-status {
+  width: fit-content;
+  border-radius: 999px;
+  background: rgba(255,255,255,.16);
+  padding: 7px 11px;
+  font-size: 13px;
+  font-weight: 900;
+}
+
 .puzzle-item {
   width: 100%;
   border: 0;
@@ -908,6 +949,122 @@ dialog::backdrop {
 
 .guess-choices button:hover {
   border-color: var(--accent);
+}
+
+.tutorial-dialog {
+  width: min(92vw, 430px);
+  padding: 0;
+  overflow: hidden;
+  background: #fff;
+  color: var(--ink);
+}
+
+.tutorial-dialog::backdrop {
+  background: rgba(17, 24, 39, .42);
+}
+
+.tutorial-head,
+.tutorial-body,
+.tutorial-actions {
+  padding: 20px;
+}
+
+.tutorial-head {
+  padding-bottom: 0;
+}
+
+.tutorial-head p {
+  margin: 0 0 6px;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.tutorial-head h3,
+.tutorial-body h4 {
+  margin: 0;
+}
+
+.tutorial-head h3 {
+  font-size: 24px;
+}
+
+.tutorial-body {
+  display: grid;
+  gap: 12px;
+}
+
+.tutorial-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-size: 20px;
+  font-weight: 950;
+}
+
+.tutorial-body h4 {
+  font-size: 20px;
+}
+
+.tutorial-body p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 650;
+}
+
+.tutorial-dots {
+  display: flex;
+  gap: 7px;
+}
+
+.tutorial-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #d1d5db;
+}
+
+.tutorial-dot.active {
+  width: 24px;
+  background: #2563eb;
+}
+
+.tutorial-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.3fr;
+  gap: 8px;
+  padding-top: 0;
+}
+
+.tutorial-actions button,
+#openTutorialBtn {
+  border: 0;
+  border-radius: 999px;
+  padding: 12px 14px;
+  font-weight: 900;
+}
+
+.tutorial-actions button {
+  background: #eef2ff;
+  color: #111827;
+}
+
+.tutorial-actions button:last-child,
+#openTutorialBtn {
+  background: #111827;
+  color: #fff;
+}
+
+.tutorial-actions button:disabled {
+  opacity: .42;
 }
 
 @media (max-width: 480px) {
