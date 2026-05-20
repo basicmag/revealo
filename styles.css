@@ -1,0 +1,1235 @@
+:root {
+  --bg: #f3f4f6;
+  --ink: #111827;
+  --muted: #6b7280;
+  --card: #ffffff;
+  --line: #1f2937;
+  --gray-fill: #9ca3af;
+  --black-fill: #111827;
+
+  --cell: 30px;
+  --rowClue: 116px;
+  --colClue: 132px;
+  --clueFont: 12px;
+  --clueSymbol: 16px;
+  --clueChipW: 23px;
+  --clueChipH: 21px;
+  --rowChipW: 18px;
+  --rowChipH: 24px;
+  --colChipW: 24px;
+  --colChipH: 18px;
+  --size: 12;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body.pwa-app .image-tool {
+  display: none !important;
+}
+
+body.pwa-app .puzzle-select.hidden {
+  display: none !important;
+}
+
+body.pwa-app .header {
+  align-items: center;
+}
+
+body.pwa-app .header h1 {
+  font-size: 28px;
+}
+
+body.pwa-app .header p {
+  font-weight: 750;
+}
+
+body.pwa-app:has(#gameView:not(.hidden)) {
+  overflow: hidden;
+}
+
+body.pwa-app:has(#gameView:not(.hidden)) .app {
+  max-width: none;
+  width: 100vw;
+  min-height: 100dvh;
+  padding: 0 6px;
+}
+
+body.pwa-app:has(#gameView:not(.hidden)) .header {
+  display: none;
+}
+
+body.pwa-app .game-view:not(.hidden) {
+  min-height: 100dvh;
+  max-height: 100dvh;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto auto;
+  align-content: stretch;
+  gap: 4px;
+  overflow: hidden;
+}
+
+body.pwa-app .game-view:not(.hidden) .card {
+  display: flex;
+  justify-content: center;
+  background: transparent;
+  padding: 4px 0 0;
+  border-radius: 0;
+}
+
+body.pwa-app .game-view:not(.hidden) .card > :not(.back-button) {
+  display: none;
+}
+
+body.pwa-app .back-button {
+  min-height: 28px;
+  margin: 0;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+body.pwa-app .actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+  margin: 0 0 4px;
+  padding: 0;
+}
+
+body.pwa-app .actions button {
+  min-height: 30px;
+  padding: 6px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+body.pwa-app .board-card,
+body.pwa-app html[data-board-size="20"] .board-card {
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+body.pwa-app .scroll-area,
+body.pwa-app html[data-board-size="20"] .scroll-area {
+  overflow: visible;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body.pwa-app .palette,
+body.pwa-app html[data-board-size="20"] .palette {
+  margin: 2px 0 16px;
+}
+
+body.pwa-app .puzzle-layout {
+  margin: 0 auto;
+}
+
+html[data-board-size="20"] {
+  --cell: clamp(18px, calc((100vw - var(--rowClue) - 34px) / var(--size)), 22px);
+  --rowClue: 118px;
+  --colClue: 156px;
+  --clueFont: 12px;
+  --clueSymbol: 16px;
+  --clueChipW: 22px;
+  --clueChipH: 20px;
+  --rowChipW: 16px;
+  --rowChipH: 22px;
+  --colChipW: 22px;
+  --colChipH: 16px;
+}
+
+@media (max-width: 700px) {
+  :root {
+    --cell: clamp(18px, calc((100vw - var(--rowClue) - 28px) / var(--size)), 30px);
+    --clueFont: 11px;
+    --clueChipW: 19px;
+    --clueChipH: 19px;
+    --rowChipW: 16px;
+    --rowChipH: 21px;
+    --colChipW: 21px;
+    --colChipH: 16px;
+  }
+
+  html[data-board-size="20"] {
+    --cell: clamp(14px, calc((100vw - var(--rowClue) - 28px) / var(--size)), 22px);
+    --clueFont: 10px;
+    --clueChipW: 19px;
+    --clueChipH: 19px;
+    --rowChipW: 15px;
+    --rowChipH: 19px;
+    --colChipW: 19px;
+    --colChipH: 15px;
+  }
+}
+
+.app {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 14px;
+}
+
+h1 {
+  font-size: 34px;
+  line-height: 1;
+  margin: 0;
+}
+
+.header p {
+  margin: 4px 0 0;
+  color: var(--muted);
+}
+
+.help {
+  width: 48px;
+  height: 48px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--card);
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.card, .board-card {
+  background: var(--card);
+  border-radius: 26px;
+  padding: 20px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.puzzle-select h2 {
+  margin: 10px 0 14px;
+  font-size: 28px;
+}
+
+.puzzle-list {
+  display: grid;
+  gap: 12px;
+}
+
+.puzzle-item {
+  width: 100%;
+  border: 0;
+  border-radius: 20px;
+  background: var(--card);
+  color: var(--ink);
+  padding: 18px;
+  text-align: left;
+  display: grid;
+  gap: 7px;
+}
+
+.puzzle-item-title {
+  font-size: 22px;
+  line-height: 1.1;
+  font-weight: 900;
+}
+
+.puzzle-item-desc {
+  color: var(--muted);
+  font-weight: 650;
+}
+
+.puzzle-item-meta,
+.puzzle-item-status {
+  width: fit-content;
+  background: #eef0f3;
+  border-radius: 999px;
+  padding: 7px 11px;
+  font-size: 13px;
+  font-weight: 850;
+}
+
+.puzzle-item-status {
+  background: #e5e7eb;
+}
+
+.back-button {
+  border: 0;
+  border-radius: 999px;
+  background: #eef0f3;
+  color: var(--ink);
+  padding: 8px 12px;
+  margin-bottom: 14px;
+  font-weight: 850;
+}
+
+.image-tool {
+  margin-top: 22px;
+}
+
+.image-tool h2 {
+  margin: 0 0 14px;
+  font-size: 28px;
+}
+
+.prompt-panel,
+.tool-panel,
+.tool-output {
+  background: var(--card);
+  border-radius: 20px;
+  padding: 18px;
+}
+
+.prompt-panel {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(130px, 1fr)) auto;
+  gap: 12px;
+  align-items: end;
+  margin-bottom: 12px;
+}
+
+.tool-panel {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(120px, 1fr));
+  gap: 12px;
+  align-items: end;
+}
+
+.prompt-panel button,
+.tool-panel button {
+  min-height: 44px;
+}
+
+.prompt-panel label,
+.tool-panel label {
+  display: grid;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 850;
+}
+
+.range-value {
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.prompt-panel input,
+.prompt-panel button,
+.tool-panel input,
+.tool-panel select,
+.tool-panel button,
+.map-result button {
+  min-height: 44px;
+  border: 0;
+  border-radius: 14px;
+  background: #eef0f3;
+  color: var(--ink);
+  padding: 0 12px;
+  font: inherit;
+  font-weight: 800;
+}
+
+#imagePromptOutput {
+  width: 100%;
+  min-height: 150px;
+  resize: vertical;
+  border: 0;
+  border-radius: 20px;
+  background: #fff;
+  color: var(--ink);
+  padding: 14px;
+  margin-bottom: 12px;
+  font: 13px/1.55 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.tool-output {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.preview-stack {
+  display: grid;
+  gap: 10px;
+}
+
+#mapPreview,
+#linePreview {
+  width: 240px;
+  height: 240px;
+  background: #fff;
+  border: 2px solid var(--line);
+}
+
+.map-result {
+  display: grid;
+  gap: 10px;
+}
+
+#solutionOutput {
+  width: 100%;
+  min-height: 240px;
+  resize: vertical;
+  border: 0;
+  border-radius: 14px;
+  background: #f9fafb;
+  color: var(--ink);
+  padding: 12px;
+  font: 12px/1.55 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.date {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+h2 {
+  margin: 0 0 8px;
+  font-size: 30px;
+}
+
+.desc {
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.stats {
+  display: flex;
+  gap: 10px;
+}
+
+.stats span {
+  background: #eef0f3;
+  border-radius: 999px;
+  padding: 9px 14px;
+  font-weight: 800;
+}
+
+.palette {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin: 18px 0 10px;
+}
+
+.palette button {
+  width: 44px;
+  min-width: 44px;
+  height: 44px;
+  min-height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  position: relative;
+  font-weight: 800;
+}
+
+.palette button.active {
+  outline: 8px solid rgba(59, 130, 246, .12);
+}
+
+.palette button.active::after {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  border: 4px solid rgba(255, 255, 255, .95);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.palette-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.palette-eraser {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #eef3fb;
+  color: #2f80ed;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  font-weight: 350;
+  line-height: 1;
+}
+
+.board-card {
+  padding: 10px;
+}
+
+.scroll-area {
+  overflow: auto;
+  padding: 8px;
+  -webkit-overflow-scrolling: touch;
+}
+
+html[data-board-size="20"] .app {
+  max-width: 760px;
+  padding-top: 8px;
+}
+
+html[data-board-size="20"] .header {
+  margin-bottom: 8px;
+}
+
+html[data-board-size="20"] .card {
+  padding: 12px 16px;
+  border-radius: 20px;
+}
+
+html[data-board-size="20"] .card h2,
+html[data-board-size="20"] .card p {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+html[data-board-size="20"] .stats,
+html[data-board-size="20"] .palette {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+html[data-board-size="20"] .palette button {
+  width: 42px;
+  min-width: 42px;
+  height: 42px;
+  min-height: 42px;
+}
+
+html[data-board-size="20"] .palette svg,
+html[data-board-size="20"] .palette .color-token {
+  width: 30px;
+  min-width: 30px;
+  height: 30px;
+}
+
+html[data-board-size="20"] .board-card {
+  margin-top: 18px;
+  padding: 6px;
+  border-radius: 18px;
+}
+
+html[data-board-size="20"] .scroll-area {
+  overflow-x: auto;
+  overflow-y: visible;
+  padding: 4px;
+}
+
+html[data-board-size="20"] .actions {
+  padding-top: 8px;
+}
+
+html[data-board-size="20"] .actions button {
+  padding: 10px 8px;
+  border-radius: 14px;
+}
+
+html[data-board-size="20"] .col-clue {
+  gap: 1px;
+}
+
+html[data-board-size="20"] .row-clue {
+  gap: 1px;
+  padding-right: 3px;
+}
+
+html[data-board-size="20"] .clue-token {
+  gap: 1px;
+}
+
+html[data-board-size="20"] .clue-token .color-token {
+  width: var(--clueChipW);
+  min-width: var(--clueChipW);
+  height: var(--clueChipH);
+  border-radius: 4px;
+}
+
+html[data-board-size="20"] .mono-hidden-token {
+  width: var(--clueChipW);
+  min-width: var(--clueChipW);
+  height: var(--clueChipH);
+  border-radius: 4px;
+}
+
+.puzzle-layout {
+  display: grid;
+  grid-template-columns: var(--rowClue) max-content;
+  grid-template-rows: var(--colClue) max-content;
+  width: max-content;
+  align-items: end;
+  justify-items: end;
+}
+
+.corner {
+  width: var(--rowClue);
+  height: var(--colClue);
+}
+
+.col-clues {
+  display: grid;
+  grid-template-columns: repeat(var(--size), var(--cell));
+  height: var(--colClue);
+  align-items: end;
+}
+
+.col-clue {
+  width: var(--cell);
+  height: var(--colClue);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1px;
+  font-size: var(--clueFont);
+  font-weight: 900;
+  line-height: 1;
+  overflow: visible;
+}
+
+.row-clues {
+  display: grid;
+  grid-template-rows: repeat(var(--size), var(--cell));
+  width: var(--rowClue);
+}
+
+.row-clue {
+  height: var(--cell);
+  width: var(--rowClue);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1px;
+  padding-right: 4px;
+  padding-left: 4px;
+  white-space: nowrap;
+  font-size: var(--clueFont);
+  font-weight: 900;
+  line-height: 1;
+  overflow: visible;
+}
+
+.clue-token {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  flex: 0 0 auto;
+}
+
+.clue-number {
+  font-size: calc(var(--clueFont) + 3px);
+  font-weight: 950;
+  line-height: .9;
+}
+
+.color-token {
+  width: var(--clueChipW);
+  min-width: var(--clueChipW);
+  height: var(--clueChipH);
+  border: 1px solid rgba(17, 24, 39, .28);
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--clueFont);
+  font-weight: 900;
+  line-height: 1;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .34);
+}
+
+.row-clue .color-token,
+.row-clue .mono-hidden-token {
+  width: var(--rowChipW);
+  min-width: var(--rowChipW);
+  height: min(var(--rowChipH), calc(var(--cell) - 2px));
+}
+
+.col-clue .color-token,
+.col-clue .mono-hidden-token {
+  width: min(var(--colChipW), calc(var(--cell) - 2px));
+  min-width: min(var(--colChipW), calc(var(--cell) - 2px));
+  height: var(--colChipH);
+}
+
+.hidden-color-token,
+.mono-hidden-token {
+  border: 2px solid var(--ink);
+  background: #fff;
+  box-shadow: none;
+}
+
+.mono-hidden-token {
+  width: var(--clueChipW);
+  min-width: var(--clueChipW);
+  height: var(--clueChipH);
+  border-radius: 3px;
+  display: inline-flex;
+}
+
+html[data-board-size] .row-clue .color-token,
+html[data-board-size] .row-clue .mono-hidden-token {
+  width: var(--rowChipW);
+  min-width: var(--rowChipW);
+  height: min(var(--rowChipH), calc(var(--cell) - 1px));
+}
+
+html[data-board-size] .col-clue .color-token,
+html[data-board-size] .col-clue .mono-hidden-token {
+  width: min(var(--colChipW), calc(var(--cell) - 1px));
+  min-width: min(var(--colChipW), calc(var(--cell) - 1px));
+  height: var(--colChipH);
+}
+
+html[data-board-size] .row-clue .color-token.two-digit,
+html[data-board-size] .row-clue .mono-hidden-token.two-digit {
+  width: min(var(--rowChipH), calc(var(--cell) - 1px));
+  min-width: min(var(--rowChipH), calc(var(--cell) - 1px));
+  height: min(var(--rowChipH), calc(var(--cell) - 1px));
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--size), var(--cell));
+  grid-template-rows: repeat(var(--size), var(--cell));
+  border-top: .5px solid rgba(31, 41, 55, .6);
+  border-left: .5px solid rgba(31, 41, 55, .6);
+  touch-action: none;
+  user-select: none;
+}
+
+.cell {
+  width: var(--cell);
+  height: var(--cell);
+  border-right: .5px solid rgba(31, 41, 55, .42);
+  border-bottom: .5px solid rgba(31, 41, 55, .42);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  padding: 0;
+  touch-action: none;
+}
+
+.cell.prefilled {
+  background: #f9fafb;
+}
+
+.cell.image-reveal {
+  background-color: #fff;
+  background-repeat: no-repeat;
+}
+
+.cell.image-reveal.revealed {
+  background-color: transparent;
+}
+
+.cell.image-reveal.wrong-fill {
+  background-image: none !important;
+}
+
+.cell svg,
+.clue-token svg,
+.palette svg {
+  display: block;
+}
+
+.clue-token svg {
+  width: var(--clueSymbol);
+  height: var(--clueSymbol);
+}
+
+.cell svg {
+  width: calc(var(--cell) * 0.96);
+  height: calc(var(--cell) * 0.96);
+}
+
+.cell .color-token {
+  width: calc(var(--cell) * 0.88);
+  min-width: 0;
+  height: calc(var(--cell) * 0.88);
+  border-radius: 3px;
+  font-size: 0;
+}
+
+.palette svg {
+  width: 36px;
+  height: 36px;
+}
+
+.palette .color-token {
+  width: 32px;
+  min-width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 0;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding-top: 14px;
+}
+
+.actions button,
+dialog button {
+  border: 0;
+  background: var(--card);
+  border-radius: 18px;
+  padding: 15px 10px;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+dialog {
+  width: min(92vw, 420px);
+  border: 0;
+  border-radius: 22px;
+  padding: 22px;
+  box-shadow: 0 24px 70px rgba(17, 24, 39, .28);
+}
+
+dialog::backdrop {
+  background: rgba(0,0,0,.35);
+}
+
+.clear-dialog {
+  width: min(92vw, 540px);
+  padding: 0;
+  overflow: hidden;
+  background: #fff;
+}
+
+.clear-dialog-head {
+  padding: 24px 24px 18px;
+  background: linear-gradient(135deg, #111827, #374151);
+  color: #fff;
+}
+
+.clear-dialog-head h3 {
+  margin: 3px 0 6px;
+  font-size: 32px;
+  letter-spacing: 0;
+}
+
+.clear-dialog-head p {
+  margin: 0;
+}
+
+.clear-kicker {
+  color: #FACC15;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.clear-dialog-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 16px;
+}
+
+.clear-dialog-actions button {
+  border: 0;
+  border-radius: 14px;
+  padding: 14px 12px;
+  background: var(--card);
+  color: var(--ink);
+  font-weight: 900;
+}
+
+.clear-dialog-actions button:first-child {
+  background: var(--ink);
+  color: #fff;
+}
+
+.clear-dialog-actions button:disabled {
+  opacity: .45;
+}
+
+.guess-dialog {
+  width: min(92vw, 460px);
+}
+
+.guess-dialog-head h3 {
+  margin: 0 0 6px;
+}
+
+.guess-dialog-head p {
+  margin: 0 0 14px;
+  color: var(--muted);
+}
+
+.guess-choices {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.guess-choices button {
+  width: 100%;
+  text-align: left;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 14px 16px;
+  background: #fff;
+  color: var(--ink);
+  font-weight: 900;
+}
+
+.guess-choices button:hover {
+  border-color: var(--accent);
+}
+
+@media (max-width: 480px) {
+  :root {
+    --rowClue: 84px;
+    --colClue: 118px;
+    --cell: clamp(18px, calc((100vw - var(--rowClue) - 24px) / var(--size)), 29px);
+    --clueFont: 11px;
+    --clueSymbol: 12px;
+    --clueChipW: 18px;
+    --clueChipH: 18px;
+  }
+
+  html[data-board-size="20"] {
+    --rowClue: 78px;
+    --colClue: 150px;
+    --cell: clamp(12px, calc((100vw - var(--rowClue) - 24px) / var(--size)), 22px);
+    --clueFont: 10px;
+    --clueSymbol: 12px;
+    --clueChipW: 17px;
+    --clueChipH: 17px;
+  }
+
+  .app {
+    max-width: none;
+    width: 100%;
+    padding: 8px;
+    overflow-x: hidden;
+  }
+
+  .header {
+    margin-bottom: 8px;
+  }
+
+  body:has(#gameView:not(.hidden)) .header {
+    display: none;
+  }
+
+  h1 { font-size: 18px; }
+  h2 { font-size: 20px; }
+  .header p { font-size: 10px; }
+  .help {
+    width: 32px;
+    height: 32px;
+    font-size: 13px;
+  }
+
+  .card {
+    padding: 10px 12px;
+    border-radius: 16px;
+  }
+
+  .game-view .card {
+    background: transparent;
+    padding: 4px 4px 8px;
+    text-align: center;
+  }
+
+  .game-view .card h2 {
+    font-size: 24px;
+    margin-bottom: 2px;
+  }
+
+  .back-button {
+    padding: 7px 10px;
+    font-size: 11px;
+    margin-bottom: 8px;
+  }
+
+  .date,
+  .desc {
+    font-size: 11px;
+  }
+
+  .desc {
+    display: none;
+  }
+
+  .stats {
+    justify-content: center;
+  }
+
+  .stats span {
+    padding: 7px 10px;
+    font-size: 11px;
+  }
+
+  .palette {
+    gap: 16px;
+    margin: 12px 0 18px;
+  }
+
+  .palette button {
+    width: 38px;
+    min-width: 38px;
+    height: 38px;
+    min-height: 38px;
+  }
+
+  .palette svg,
+  .palette .color-token {
+    width: 28px;
+    min-width: 28px;
+    height: 28px;
+  }
+
+  .palette-eraser {
+    width: 34px;
+    height: 34px;
+    font-size: 31px;
+  }
+
+  .board-card {
+    margin-top: 0;
+    padding: 0;
+    border-radius: 14px;
+    background: transparent;
+  }
+
+  .scroll-area {
+    overflow: visible;
+    padding: 4px 0;
+  }
+
+  html[data-board-size="20"] .scroll-area {
+    overflow: visible;
+    padding: 4px 0;
+  }
+
+  html[data-board-size="20"] .board-card {
+    margin-top: 0;
+  }
+
+  html[data-board-size="20"] .clue-token .color-token,
+  html[data-board-size="20"] .mono-hidden-token {
+    width: var(--clueChipW);
+    min-width: var(--clueChipW);
+    height: var(--clueChipH);
+  }
+
+  .puzzle-layout {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .row-clue {
+    padding-left: 2px;
+    padding-right: 3px;
+  }
+
+  .clue-token .color-token {
+    border-radius: 4px;
+    letter-spacing: 0;
+  }
+
+  html[data-board-size] .row-clue .color-token,
+  html[data-board-size] .row-clue .mono-hidden-token {
+    width: var(--rowChipW);
+    min-width: var(--rowChipW);
+    height: min(var(--rowChipH), calc(var(--cell) - 1px));
+  }
+
+  html[data-board-size] .col-clue .color-token,
+  html[data-board-size] .col-clue .mono-hidden-token {
+    width: min(var(--colChipW), calc(var(--cell) - 1px));
+    min-width: min(var(--colChipW), calc(var(--cell) - 1px));
+    height: var(--colChipH);
+  }
+
+  html[data-board-size] .row-clue .color-token.two-digit,
+  html[data-board-size] .row-clue .mono-hidden-token.two-digit {
+    width: min(var(--rowChipH), calc(var(--cell) - 1px));
+    min-width: min(var(--rowChipH), calc(var(--cell) - 1px));
+    height: min(var(--rowChipH), calc(var(--cell) - 1px));
+  }
+
+  .actions {
+    gap: 7px;
+  }
+
+  .actions button {
+    padding: 10px 8px;
+    border-radius: 14px;
+    font-size: 12px;
+  }
+
+  .tool-panel,
+  .prompt-panel,
+  .tool-output {
+    grid-template-columns: 1fr;
+  }
+  #mapPreview,
+  #linePreview {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 520px) {
+  body:has(#gameView:not(.hidden)) {
+    overflow: hidden;
+  }
+
+  body:has(#gameView:not(.hidden)) .header {
+    display: none;
+  }
+
+  body:has(#gameView:not(.hidden)) .app {
+    max-width: none;
+    width: 100vw;
+    min-height: 100dvh;
+    padding: 0 4px;
+  }
+
+  .game-view:not(.hidden) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 50px 64px;
+    grid-template-rows: 100dvh;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .game-view .card {
+    grid-column: 3;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-self: start;
+    padding: 6px 0 0;
+  }
+
+  .game-view .card > :not(.back-button) {
+    display: none;
+  }
+
+  body.pwa-app .game-view .actions {
+    grid-column: 3;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 38px;
+    align-content: center;
+    align-self: center;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  body.pwa-app .game-view .actions button {
+    width: 64px;
+    height: 38px;
+    min-height: 38px;
+    padding: 0 6px;
+    border-radius: 11px;
+    font-size: 11px;
+    line-height: 1.05;
+  }
+
+  .game-view .back-button {
+    width: 64px;
+    min-height: 38px;
+    padding: 0 6px;
+    white-space: normal;
+    line-height: 1.05;
+  }
+
+  .board-card,
+  html[data-board-size="20"] .board-card {
+    grid-column: 1;
+    grid-row: 1;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+  }
+
+  .scroll-area,
+  html[data-board-size="20"] .scroll-area {
+    overflow: visible;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  body.pwa-app .puzzle-layout {
+    margin: 0;
+  }
+
+  .palette,
+  html[data-board-size="20"] .palette {
+    grid-column: 2;
+    grid-row: 1;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    margin: 0;
+    align-self: center;
+  }
+
+  .palette button,
+  html[data-board-size="20"] .palette button {
+    width: 38px;
+    min-width: 38px;
+    height: 38px;
+    min-height: 38px;
+  }
+
+  .palette svg,
+  .palette .color-token,
+  html[data-board-size="20"] .palette svg,
+  html[data-board-size="20"] .palette .color-token {
+    width: 28px;
+    min-width: 28px;
+    height: 28px;
+  }
+
+  .palette-eraser {
+    width: 34px;
+    height: 34px;
+    font-size: 31px;
+  }
+}
