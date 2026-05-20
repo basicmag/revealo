@@ -640,7 +640,7 @@ function renderPuzzleSelect() {
     button.innerHTML = `
       <span class="puzzle-item-title">${puzzlePublicTitle(item)}</span>
       <span class="puzzle-item-desc">${categoryText(item)}</span>
-      <span class="puzzle-item-meta">${item.difficulty} / ${item.size}x${item.size} / ${item.theme}${isColorPuzzle(item) ? " / Color" : ""}</span>
+      <span class="puzzle-item-meta">${item.difficulty} / ${item.size}x${item.size} / ${item.theme}</span>
       <span class="puzzle-item-status">${status}</span>
     `;
     button.onclick = () => startPuzzle(item.id, { mode: "normal" });
@@ -680,7 +680,7 @@ function startPuzzle(puzzleId, options = {}) {
   document.getElementById("puzzleTitle").textContent = completed ? puzzleAnswerTitle(puzzle) : puzzlePublicTitle(puzzle);
   document.getElementById("puzzleDesc").textContent = completed ? puzzleAnswerDescription(puzzle) : categoryText(puzzle);
   const modeLabel = currentPlayMode === "daily" ? `${ui.dailyChallenge} / ` : "";
-  document.getElementById("puzzleMeta").textContent = `${modeLabel}${puzzle.createdAt} / ${puzzle.difficulty} / ${puzzle.size}x${puzzle.size}${isColorPuzzle() ? " / Color" : ""}`;
+  document.getElementById("puzzleMeta").textContent = `${modeLabel}${puzzle.createdAt} / ${puzzle.difficulty} / ${puzzle.size}x${puzzle.size}`;
   document.getElementById("puzzleSelect").classList.add("hidden");
   document.getElementById("adListBottom").hidden = true;
   document.getElementById("imageTool").classList.add("hidden");
