@@ -1293,7 +1293,9 @@ async function shareResult() {
 
 function shareUrl() {
   const base = location.pathname.endsWith("/") ? location.href : new URL("./", location.href).href;
-  return new URL(`puzzles/${encodeURIComponent(puzzle.id)}/`, base).href;
+  const url = new URL(`puzzles/${encodeURIComponent(puzzle.id)}/`, base);
+  url.searchParams.set("v", puzzleSolutionSignature(puzzle));
+  return url.href;
 }
 
 async function copyResult() {

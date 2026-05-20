@@ -1,4 +1,4 @@
-const CACHE_NAME = "revealo-pwa-v26";
+const CACHE_NAME = "revealo-pwa-v27";
 const APP_SHELL = [
   "./",
   "./index.html",
