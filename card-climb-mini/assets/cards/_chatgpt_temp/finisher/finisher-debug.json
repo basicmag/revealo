@@ -1,0 +1,7 @@
+{
+  "ok": true,
+  "id": "finisher",
+  "imageUrl": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000cc20720988a7a3819aba6d2c&ts=494365&p=fs&cid=1&sig=eef1b6872bf0445bb1c74a773725823fa5e4ba9c663860cb03d357d081f72ddf&v=0",
+  "output": "/Users/user/Documents/revealo-app/apps/card_climb_mini/public/assets/cards/finisher.png",
+  "prompt": "Create a card center illustration for Card Climb Mini. Subject: a dramatic glowing greatsword point-down with gold and coral burst, epic but simple, bold silhouette, transparent background. Negative: no text, no UI frame, no watermark, no complex background."
+}

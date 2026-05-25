@@ -1,0 +1,7 @@
+{
+  "ok": true,
+  "id": "rat",
+  "imageUrl": "https://chatgpt.com/backend-api/estuary/content?id=file_000000009f887209822ba8856503e7ce&ts=494366&p=fs&cid=1&sig=a7f22798aee6eb2e08287fa59781dbcd3fdd0ab2c758b9f4b59c005f7ff6228a&v=0",
+  "output": "/Users/user/Documents/revealo-app/apps/card_climb_mini/public/assets/enemies/rat.png",
+  "prompt": "Create a monster illustration for Card Climb Mini. Unified style: cute fantasy roguelite mobile game art, clean vector-like digital illustration, soft cel shading, deep navy outlines, bold readable silhouette, transparent background. Subject: a small fantasy tower rat holding a tiny rusty dagger, mischievous but cute. Centered full-body icon. Negative: no text, no UI, no frame, no watermark, no gore, no realistic photo."
+}

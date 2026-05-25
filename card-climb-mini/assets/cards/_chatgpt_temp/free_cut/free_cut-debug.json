@@ -1,0 +1,7 @@
+{
+  "ok": true,
+  "id": "free_cut",
+  "imageUrl": "https://chatgpt.com/backend-api/estuary/content?id=file_000000001398720984f07668391b92d0&ts=494365&p=fs&cid=1&sig=4fbd4822ceb7a8c8dd4a2340292173bc75ea5686c4559b9ddc9248738cae99b9&v=0",
+  "output": "/Users/user/Documents/revealo-app/apps/card_climb_mini/public/assets/cards/free_cut.png",
+  "prompt": "Create a card center illustration for Card Climb Mini. Subject: a light dagger making a quick cyan slash, minimal and readable, deep navy outline, transparent background. Negative: no text, no frame, no watermark, no realistic rendering."
+}

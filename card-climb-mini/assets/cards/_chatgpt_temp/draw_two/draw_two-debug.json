@@ -1,0 +1,7 @@
+{
+  "ok": true,
+  "id": "draw_two",
+  "imageUrl": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000a6c07206a827dbd95df14346&ts=494365&p=fs&cid=1&sig=480e705a34d1dcf0fc370cebf76acd06820c8ff82e3fce807eae481023599dd8&v=0",
+  "output": "/Users/user/Documents/revealo-app/apps/card_climb_mini/public/assets/cards/draw_two.png",
+  "prompt": "Create a card center illustration for Card Climb Mini. Subject: two small parchment cards spinning out of a blue magic circle, no readable symbols, transparent background, clean cute fantasy roguelite art. Negative: no text, no letters, no numbers, no UI, no watermark."
+}

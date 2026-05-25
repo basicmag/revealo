@@ -1,0 +1,7 @@
+{
+  "ok": true,
+  "id": "bandage",
+  "imageUrl": "https://chatgpt.com/backend-api/estuary/content?id=file_000000002ae87206bdcf325e66954169&ts=494365&p=fs&cid=1&sig=268f8b39868b9b8b2489421d4ae34ed4f6c18385fe81762f2aa4f6ab9919058e&v=0",
+  "output": "/Users/user/Documents/revealo-app/apps/card_climb_mini/public/assets/cards/bandage.png",
+  "prompt": "Create a card center illustration for Card Climb Mini. Subject: a rolled bandage with an emerald healing cross-shaped sparkle, soft cel shading, deep navy outline, transparent background. Negative: no text, no letters, no UI frame, no watermark."
+}

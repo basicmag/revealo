@@ -1,0 +1,7 @@
+{
+  "ok": true,
+  "id": "bandit",
+  "imageUrl": "https://chatgpt.com/backend-api/estuary/content?id=file_000000003ca47209a333636cc5c9343f&ts=494366&p=fs&cid=1&sig=786083b63d658dd1bfaf2b6202c338b89c47f47305cbd64ef885307ca5ff2a1c&v=0",
+  "output": "/Users/user/Documents/revealo-app/apps/card_climb_mini/public/assets/enemies/bandit.png",
+  "prompt": "Create a monster illustration for Card Climb Mini. Subject: a short hooded bandit with a wooden club and red scarf, cute fantasy roguelite mobile art, deep navy outlines, transparent background, centered full-body. Negative: no text, no logo, no gore, no realistic photo, no detailed background."
+}

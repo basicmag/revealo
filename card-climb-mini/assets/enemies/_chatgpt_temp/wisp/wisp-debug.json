@@ -1,0 +1,7 @@
+{
+  "ok": true,
+  "id": "wisp",
+  "imageUrl": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000aa307206a061356566dc0ef5&ts=494366&p=fs&cid=1&sig=f65feb5ca8bcf69102903686d5d6b45ff4707276d69824543b2b8f4a5e7ecdd6&v=0",
+  "output": "/Users/user/Documents/revealo-app/apps/card_climb_mini/public/assets/enemies/wisp.png",
+  "prompt": "Create a monster illustration for Card Climb Mini in unified cute fantasy roguelite style. Subject: a floating blue fire wisp with a tiny face and magical spark trails, transparent background, centered icon. Negative: no text, no frame, no watermark, no realistic fire, no busy background."
+}
