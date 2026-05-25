@@ -1,7 +1,0 @@
-{
-  "ok": true,
-  "id": "dragon",
-  "imageUrl": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000134472068ffd0abe592aec68&ts=494366&p=fs&cid=1&sig=3901f157d2aa58a19457bb7c7d41e71e240c327d05c8726f8c98c8276301b2f9&v=0",
-  "output": "/Users/user/Documents/revealo-app/apps/card_climb_mini/public/assets/enemies/dragon.png",
-  "prompt": "Create a boss monster illustration for Card Climb Mini. Unified cute fantasy roguelite mobile game art, clean vector-like digital illustration, soft cel shading, bold readable silhouette, deep navy outlines, transparent background. Subject: a compact cute mini dragon with coral wings, blue scales, and a tiny flame. Centered full-body boss icon, slightly larger and more impressive than normal enemies. Negative: no text, no UI, no frame, no watermark, no realistic photo, no gore."
-}

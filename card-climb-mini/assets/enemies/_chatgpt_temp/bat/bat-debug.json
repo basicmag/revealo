@@ -1,7 +1,0 @@
-{
-  "ok": true,
-  "id": "bat",
-  "imageUrl": "https://chatgpt.com/backend-api/estuary/content?id=file_000000002af87209bf290e0b1dbc77e5&ts=494366&p=fs&cid=1&sig=263eec1558b90a2344dfc6bda48614ffff70a1617c3b9ae6c5cc9101f8db2348&v=0",
-  "output": "/Users/user/Documents/revealo-app/apps/card_climb_mini/public/assets/enemies/bat.png",
-  "prompt": "Create a monster illustration for Card Climb Mini in cohesive cute fantasy roguelite style. Subject: a round dark blue bat with oversized ears and tiny cyan eyes, soft cel shading, transparent background, centered full-body icon. Negative: no text, no frame, no watermark, no horror, no realistic photo."
-}

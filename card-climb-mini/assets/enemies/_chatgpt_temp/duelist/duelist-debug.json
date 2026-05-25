@@ -1,7 +1,0 @@
-{
-  "ok": true,
-  "id": "duelist",
-  "imageUrl": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000f2a0720683f126a55ca65ca7&ts=494366&p=fs&cid=1&sig=7e9b670207ed2cc04762bffda78558c511a57afa74f4acf0cd6205edc5794590&v=0",
-  "output": "/Users/user/Documents/revealo-app/apps/card_climb_mini/public/assets/enemies/duelist.png",
-  "prompt": "Create an elite monster illustration for Card Climb Mini. Subject: a masked fantasy duelist with a thin rapier and blue cape, cute but sharp silhouette, deep navy outlines, transparent background, centered full-body. Negative: no text, no UI, no watermark, no realistic photo."
-}

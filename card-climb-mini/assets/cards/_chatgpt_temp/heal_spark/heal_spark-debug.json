@@ -1,7 +1,0 @@
-{
-  "ok": true,
-  "id": "heal_spark",
-  "imageUrl": "https://chatgpt.com/backend-api/estuary/content?id=file_000000009ac07206bd051c3190634aba&ts=494365&p=fs&cid=1&sig=c21d6a7cb549d6ee2d69541faafa1a6fe21c4a65b16be83c86cc93fea59c5b36&v=0",
-  "output": "/Users/user/Documents/revealo-app/apps/card_climb_mini/public/assets/cards/heal_spark.png",
-  "prompt": "Create a card center illustration for Card Climb Mini in a clean vector-like cute fantasy roguelite style. Subject: a small emerald healing spark shaped like a glowing leaf and star, soft glow, deep navy outline, transparent background. Negative: no text, no UI, no frame, no watermark, no realistic photo."
-}

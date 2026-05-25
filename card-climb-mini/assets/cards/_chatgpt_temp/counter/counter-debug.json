@@ -1,7 +1,0 @@
-{
-  "ok": true,
-  "id": "counter",
-  "imageUrl": "https://chatgpt.com/backend-api/estuary/content?id=file_0000000065f072068e25b4e5055d3201&ts=494365&p=fs&cid=1&sig=665cda8de095a7e8cfd0b8c5efd78463b3a99979d7e7db092d6e6f59bcfc54bc&v=0",
-  "output": "/Users/user/Documents/revealo-app/apps/card_climb_mini/public/assets/cards/counter.png",
-  "prompt": "Create a card center illustration for Card Climb Mini. Subject: a shield deflecting a red slash back as a blue arc, clean vector-like soft cel shading, transparent background. Negative: no text, no frame, no watermark."
-}

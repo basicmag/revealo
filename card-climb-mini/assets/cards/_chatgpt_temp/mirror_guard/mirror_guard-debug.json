@@ -1,7 +1,0 @@
-{
-  "ok": true,
-  "id": "mirror_guard",
-  "imageUrl": "https://chatgpt.com/backend-api/estuary/content?id=file_000000004edc7209933a66dbdec0c503&ts=494365&p=fs&cid=1&sig=763c3c11a70c6cc04cd2d99dad4dab38dd2456975a78eb45889e576aebc06fdd&v=0",
-  "output": "/Users/user/Documents/revealo-app/apps/card_climb_mini/public/assets/cards/mirror_guard.png",
-  "prompt": "Create a card center illustration for Card Climb Mini in the same cute fantasy roguelite art style. Subject: a reflective blue shield with a tiny mirrored slash glint, transparent background. Negative: no text, no card frame, no watermark, no realistic photo."
-}
