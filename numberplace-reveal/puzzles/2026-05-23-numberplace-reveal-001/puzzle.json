@@ -1,0 +1,165 @@
+{
+  "id": "2026-05-23-numberplace-reveal-001",
+  "type": "numberplace-reveal",
+  "date": "2026-05-23",
+  "size": 6,
+  "blockWidth": 3,
+  "blockHeight": 2,
+  "difficulty": "normal",
+  "title": {
+    "ja": "テスト問題 001",
+    "en": "Test Puzzle 001"
+  },
+  "question": {
+    "ja": "このシルエットは何？",
+    "en": "What is this silhouette?"
+  },
+  "subject": {
+    "key": "rocket",
+    "ja": "ロケット",
+    "en": "Rocket"
+  },
+  "givens": [
+    [
+      1,
+      0,
+      0,
+      4,
+      0,
+      6
+    ],
+    [
+      0,
+      5,
+      6,
+      0,
+      2,
+      0
+    ],
+    [
+      2,
+      0,
+      0,
+      5,
+      0,
+      4
+    ],
+    [
+      0,
+      6,
+      0,
+      0,
+      3,
+      0
+    ],
+    [
+      3,
+      0,
+      2,
+      0,
+      0,
+      5
+    ],
+    [
+      0,
+      4,
+      0,
+      3,
+      0,
+      0
+    ]
+  ],
+  "solution": [
+    [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    [
+      4,
+      5,
+      6,
+      1,
+      2,
+      3
+    ],
+    [
+      2,
+      3,
+      1,
+      5,
+      6,
+      4
+    ],
+    [
+      5,
+      6,
+      4,
+      2,
+      3,
+      1
+    ],
+    [
+      3,
+      1,
+      2,
+      6,
+      4,
+      5
+    ],
+    [
+      6,
+      4,
+      5,
+      3,
+      1,
+      2
+    ]
+  ],
+  "answerChoices": [
+    {
+      "ja": "ロケット",
+      "en": "Rocket"
+    },
+    {
+      "ja": "灯台",
+      "en": "Lighthouse"
+    },
+    {
+      "ja": "鉛筆",
+      "en": "Pencil"
+    },
+    {
+      "ja": "ペンギン",
+      "en": "Penguin"
+    }
+  ],
+  "correctAnswerIndex": 0,
+  "sharePromptCell": {
+    "row": 0,
+    "col": 1,
+    "label": "★",
+    "choices": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "answer": 2
+  },
+  "assets": {
+    "color": "puzzles/2026-05-23-numberplace-reveal-001/color.png",
+    "silhouette": "puzzles/2026-05-23-numberplace-reveal-001/silhouette.png",
+    "ogp": {
+      "ja": "puzzles/2026-05-23-numberplace-reveal-001/ogp-ja.png",
+      "en": "puzzles/2026-05-23-numberplace-reveal-001/ogp-en.png"
+    },
+    "thumbnail": "puzzles/2026-05-23-numberplace-reveal-001/thumbnail.png"
+  },
+  "revealMode": "cell",
+  "allowGuessBeforeComplete": true,
+  "continueAfterCorrectGuess": true
+}
