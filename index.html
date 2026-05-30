@@ -4,19 +4,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#f5f7fb">
-  <title>Logic Games</title>
-  <meta name="description" content="Logic Games is the home of Revealo, Silhouette Logic, Number Place Reveal, and Card Climb Mini. Play browser puzzle games on desktop and mobile.">
+  <title>Revealo - Picture Reveal Logic Puzzle</title>
+  <meta name="description" content="Revealo is a premium browser logic puzzle game. Solve row and column color clues to reveal beautiful pixel pictures. Play on desktop and mobile.">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8927542236511318" crossorigin="anonymous"></script>
   <style>
     :root {
       --bg: #f5f7fb;
       --ink: #111827;
-      --muted: #64748b;
+      --muted: #4b5563;
       --card: #ffffff;
-      --line: #dbe3ee;
+      --line: #e5e7eb;
       --accent: #2563eb;
       --accent-soft: #dbeafe;
-      --cyan: #06b6d4;
+      --cyan: #0891b2;
     }
 
     * { box-sizing: border-box; }
@@ -26,8 +26,8 @@
       min-height: 100vh;
       background: var(--bg);
       color: var(--ink);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.65;
+      font-family: system-ui, -apple-system, sans-serif;
+      line-height: 1.7;
     }
 
     body:not(.lang-ja) [data-ja],
@@ -36,9 +36,9 @@
     }
 
     .shell {
-      width: min(1120px, calc(100% - 32px));
+      width: min(1000px, calc(100% - 32px));
       margin: 0 auto;
-      padding: 24px 0 48px;
+      padding: 32px 0 64px;
     }
 
     header {
@@ -46,22 +46,23 @@
       align-items: center;
       justify-content: space-between;
       gap: 16px;
-      margin-bottom: 24px;
+      margin-bottom: 32px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 16px;
     }
 
     .brand {
       color: var(--ink);
       text-decoration: none;
       font-size: 24px;
-      font-weight: 950;
-      letter-spacing: 0;
+      font-weight: 800;
+      letter-spacing: -0.5px;
     }
 
     nav {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      justify-content: flex-end;
     }
 
     nav a {
@@ -70,157 +71,199 @@
       background: var(--card);
       border: 1px solid var(--line);
       border-radius: 999px;
-      padding: 8px 12px;
+      padding: 6px 16px;
       font-size: 14px;
-      font-weight: 850;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    nav a:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: var(--accent-soft);
     }
 
     .hero {
       background:
-        radial-gradient(circle at 88% 16%, rgba(37, 99, 235, .14), transparent 30%),
-        radial-gradient(circle at 16% 90%, rgba(6, 182, 212, .16), transparent 30%),
+        radial-gradient(circle at 90% 10%, rgba(37, 99, 235, 0.08), transparent 40%),
+        radial-gradient(circle at 10% 90%, rgba(8, 145, 178, 0.1), transparent 40%),
         var(--card);
-      border-radius: 28px;
-      padding: clamp(24px, 5vw, 48px);
-      box-shadow: 0 18px 45px rgba(15, 23, 42, .07);
+      border-radius: 24px;
+      padding: 48px 32px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+      border: 1px solid var(--line);
+      text-align: center;
+      margin-bottom: 40px;
     }
 
     .eyebrow {
-      margin: 0 0 10px;
+      margin: 0 0 12px;
       color: var(--accent);
-      font-size: 13px;
-      font-weight: 950;
-      letter-spacing: .08em;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 1px;
       text-transform: uppercase;
     }
 
     h1 {
-      margin: 0;
-      font-size: clamp(38px, 8vw, 72px);
-      line-height: 1;
-      letter-spacing: 0;
+      margin: 0 0 16px;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.2;
+      font-weight: 900;
+      letter-spacing: -1px;
     }
 
     .lead {
-      margin: 16px 0 0;
+      margin: 0 auto 28px;
       color: var(--muted);
-      font-size: clamp(17px, 2.4vw, 21px);
-      font-weight: 700;
-      max-width: 760px;
+      font-size: clamp(16px, 2vw, 19px);
+      max-width: 680px;
     }
 
-    .actions {
+    .hero-actions {
       display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 24px;
+      justify-content: center;
+      gap: 16px;
     }
 
     .button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 48px;
+      min-height: 52px;
       border-radius: 999px;
-      padding: 11px 18px;
+      padding: 12px 32px;
       text-decoration: none;
-      font-weight: 950;
+      font-weight: 700;
+      font-size: 16px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
     }
 
     .button.primary {
       background: var(--ink);
       color: #fff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
-    .button.secondary {
-      background: var(--accent-soft);
-      color: var(--ink);
+    .button.primary:hover {
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
     }
 
-    .games {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-      margin-top: 24px;
-    }
-
-    .game-card,
-    .link-card {
+    /* Article layout */
+    .article-section {
       background: var(--card);
       border: 1px solid var(--line);
       border-radius: 20px;
-      padding: 18px;
+      padding: 40px;
+      margin-bottom: 32px;
     }
 
-    .game-card {
-      display: flex;
-      flex-direction: column;
-      min-height: 100%;
+    .article-section h2 {
+      margin-top: 0;
+      margin-bottom: 24px;
+      font-size: 24px;
+      border-bottom: 2px solid var(--accent-soft);
+      padding-bottom: 8px;
+      color: var(--ink);
     }
 
-    .game-head {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 12px;
-    }
-
-    .game-icon {
-      width: 64px;
-      height: 64px;
-      flex: 0 0 auto;
-      border-radius: 18px;
-      border: 1px solid var(--line);
-      background: #fff;
-      object-fit: cover;
-    }
-
-    h2 {
-      margin: 0 0 8px;
+    .article-section h3 {
       font-size: 18px;
-      line-height: 1.25;
+      margin-top: 24px;
+      margin-bottom: 12px;
+      color: var(--accent);
     }
 
-    .game-card p,
-    .link-card p {
-      margin: 0;
+    .article-section p {
       color: var(--muted);
-      font-weight: 650;
+      margin-bottom: 16px;
     }
 
-    .game-card .button {
-      width: 100%;
-      margin-top: auto;
-    }
-
-    .site-links {
+    .grid-2 {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-      margin-top: 18px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .feature-card {
+      background: var(--bg);
+      padding: 24px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+    }
+
+    .feature-card h4 {
+      margin: 0 0 10px;
+      font-size: 16px;
+      color: var(--ink);
+    }
+
+    .feature-card p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    /* FAQ accordion simulation */
+    .faq-item {
+      border-bottom: 1px solid var(--line);
+      padding: 16px 0;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-question {
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+
+    .faq-answer {
+      font-size: 14px;
+      color: var(--muted);
+      margin: 0;
     }
 
     footer {
-      margin-top: 24px;
+      margin-top: 48px;
+      border-top: 1px solid var(--line);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       color: var(--muted);
-      font-size: 13px;
-      font-weight: 700;
+      font-size: 14px;
     }
 
-    @media (max-width: 760px) {
-      header {
-        align-items: flex-start;
+    .footer-links a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 16px;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    @media (max-width: 768px) {
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+      .hero-actions {
         flex-direction: column;
       }
-
-      nav {
-        justify-content: flex-start;
+      footer {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
       }
-
-      .hero,
-      .games,
-      .site-links {
-        grid-template-columns: 1fr;
+      .footer-links a {
+        margin: 0 8px;
       }
     }
   </style>
@@ -228,103 +271,109 @@
 <body>
   <main class="shell">
     <header>
-      <a class="brand" href="./">Logic Games</a>
+      <a class="brand" href="./">Revealo</a>
       <nav aria-label="Site navigation">
-        <a href="./revealo/">Revealo</a>
-        <a href="./silhouettelogic/">Silhouette Logic</a>
-        <a href="./numberplace-reveal/">Number Place Reveal</a>
-        <a href="./card-climb-mini/">Card Climb Mini</a>
-        <a href="./revealo/about/">About</a>
-        <a href="./revealo/privacy/">Privacy</a>
-        <a href="./revealo/contact/">Contact</a>
+        <a href="./revealo/">Play Game</a>
+        <a href="./about/">About</a>
+        <a href="./privacy/">Privacy Policy</a>
+        <a href="./contact/">Contact</a>
       </nav>
     </header>
 
     <section class="hero">
-      <div>
-        <p class="eyebrow">Browser Puzzle Games</p>
-        <h1>Logic Games</h1>
-        <p class="lead" data-ja>スマホでもPCでも遊べる、絵あて・線画・ナンプレ・カード系のブラウザゲーム集です。</p>
-        <p class="lead" data-en>Play picture reveal, line drawing, number-place, and card games in your browser on mobile or desktop.</p>
-        <div class="actions">
-          <a class="button primary" href="./revealo/">Revealo</a>
-          <a class="button secondary" href="./silhouettelogic/">Silhouette Logic</a>
-          <a class="button secondary" href="./numberplace-reveal/">Number Place Reveal</a>
-          <a class="button secondary" href="./card-climb-mini/">Card Climb Mini</a>
-        </div>
+      <p class="eyebrow" data-ja>ロジック塗り絵パズル</p>
+      <p class="eyebrow" data-en>Logic Coloring Puzzle</p>
+      <h1 data-ja>絵があらわれるロジックパズル</h1>
+      <h1 data-en>Revealo - Picture Logic Game</h1>
+      <p class="lead" data-ja>Revealoは、数字と色のヒントを解きながら、美しいドット絵の正体を当てる新感覚のロジックパズルゲームです。スマホ・PCのブラウザから無料で今すぐ遊べます。</p>
+      <p class="lead" data-en>Revealo is a picture logic coloring game. Deduce using color and number hints to paint cells and reveal hidden pixel pictures. Play in browser on mobile and desktop.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="./revealo/" data-ja>ゲームをプレイする</a>
+        <a class="button primary" href="./revealo/" data-en>Play Game Now</a>
       </div>
     </section>
 
-    <section class="games" aria-label="Games">
-      <article class="game-card">
-        <div class="game-head">
-          <img class="game-icon" src="./revealo/icons/icon-192.png" alt="">
-          <div>
-            <h2>Revealo</h2>
-            <p data-ja>色と数字のヒントで隠れた絵を開示するパズル。</p>
-            <p data-en>Reveal hidden pictures from color and number hints.</p>
-          </div>
+    <!-- Detailed content in Japanese for AdSense content value -->
+    <article class="article-section" data-ja>
+      <h2>Revealo（リビーロ）とは？新感覚のパズル体験</h2>
+      <p>Revealo（リビーロ）は、従来の「イラストロジック（ノノグラム、ピクロス）」や「ナンプレ（数独）」の面白さを融合させ、さらに色彩の楽しさを加えたウェブブラウザ向けの完全無料パズルゲームです。</p>
+      <p>プレイヤーに与えられるのは、行と列に並んだ「数字」と「カラーチップ」のヒントだけ。これらの条件を論理的に整理し、空白のマス目に正しい色を塗っていくことで、隠されたイラストを少しずつ浮かび上がらせていきます。イラストが何であるかを予想する推理要素もあり、最初から最後まで飽きずに頭の体操を楽しむことができます。</p>
+
+      <h3>パズルの基本ルール</h3>
+      <p>Revealoのルールは非常にシンプルで、かつ奥深いものです：</p>
+      <ul>
+        <li><strong>ヒントチップの数字：</strong> 各行・各列に並ぶ数値は、その列に「同じ色のマスが連続して塗られる数」を表しています。</li>
+        <li><strong>色の順序：</strong> ヒントに並んでいる色の順番通りに、上から下（または左から右）へマスを塗る必要があります。</li>
+        <li><strong>スキップ（空白マス）：</strong> 色のブロックの間には、1マス以上の空白（または異なる色）が入ります。ただし、具体的な空白の数はヒントには書かれていません。論理的に絞り込んでいく必要があります。</li>
+      </ul>
+
+      <h3>他のペンシルパズル（ピクロスやナンプレ）との違い</h3>
+      <p>一般的なピクロスでは「塗るか・塗らないか」の2択ですが、Revealoはカラーイラストに対応しています。カラーピクロスと異なり、Revealoのヒントは色と連続数のペアに加えて「一部のヒントが隠されている（難易度Normal以上）」など、より推理力を試されるギミックが満載です。ナンプレのような徹底した論理的消去法と、ノノグラムのビジュアル的な楽しさの両方を同時に味わうことができます。</p>
+
+      <h3>スマホで快適プレイ！PWA（プログレッシブウェブアプリ）対応</h3>
+      <p>Revealoはインストール不要でブラウザから直接楽しめますが、PWA技術に対応しているため、スマホのホーム画面に追加して本物のアプリのように全画面で軽快に動作させることができます。通勤・通学のスキマ時間や就寝前のリラックスタイムに、いつでもすぐに起動して脳トレを開始できます。</p>
+    </article>
+
+    <article class="article-section" data-ja>
+      <h2>攻略のヒントと初心者ガイド</h2>
+      <div class="grid-2">
+        <div class="feature-card">
+          <h4>1. 確定する大きい数字から攻める</h4>
+          <p>パズルを解き始める際は、行または列のサイズ（例：10x10なら「10」に近い数字のヒント）に近い大きな数字を探します。確実に塗れるマスを先にマークすることで、周辺のヒントも自ずと確定しやすくなります。</p>
         </div>
-        <a class="button primary" href="./revealo/" data-ja>プレイ</a>
-        <a class="button primary" href="./revealo/" data-en>Play</a>
-      </article>
-
-      <article class="game-card">
-        <div class="game-head">
-          <img class="game-icon" src="./silhouettelogic/icons/icon-192.png" alt="">
-          <div>
-            <h2>Silhouette Logic</h2>
-            <p data-ja>座標と方向ヒントを読み、線を引いて正体を当てるパズル。</p>
-            <p data-en>Draw from coordinate and direction hints, then guess the picture.</p>
-          </div>
+        <div class="feature-card">
+          <h4>2. 消去法（×マーク）を活用する</h4>
+          <p>絶対に色が塗られないと分かったマスには、パレットの「消す（×）」ツールを使って空白を確定させます。視覚的に候補を絞り込むことが、クリアタイムを縮める最大の秘訣です。</p>
         </div>
-        <a class="button primary" href="./silhouettelogic/" data-ja>プレイ</a>
-        <a class="button primary" href="./silhouettelogic/" data-en>Play</a>
-      </article>
-
-      <article class="game-card">
-        <div class="game-head">
-          <img class="game-icon" src="./numberplace-reveal/icons/icon-192.png" alt="">
-          <div>
-            <h2>Number Place Reveal</h2>
-            <p data-ja>ミニナンプレを解きながら、隠れたシルエットを当てるパズル。</p>
-            <p data-en>Solve a mini number-place grid and guess the hidden silhouette.</p>
-          </div>
+        <div class="feature-card">
+          <h4>3. 「何の絵？」推理機能を使う</h4>
+          <p>盤面がある程度埋まってくると、「何の絵？」ボタンからイラストの正体を予想することができます。正解を選択すると、未確定のマスにヒントが表示されるクリアボーナスが得られ、難しい問題もスッキリ解決できます。</p>
         </div>
-        <a class="button primary" href="./numberplace-reveal/" data-ja>プレイ</a>
-        <a class="button primary" href="./numberplace-reveal/" data-en>Play</a>
-      </article>
-
-      <article class="game-card">
-        <div class="game-head">
-          <img class="game-icon" src="./card-climb-mini/icons/icon-192.png" alt="">
-          <div>
-            <h2>Card Climb Mini</h2>
-            <p data-ja>15分で塔を登る、seed再現型カードローグライト。</p>
-            <p data-en>Climb a replayable seed-based card tower in about 15 minutes.</p>
-          </div>
+        <div class="feature-card">
+          <h4>4. 難易度と盤面サイズを選ぶ</h4>
+          <p>初心者の方は8x8のEasyパズルから開始し、慣れてきたら10x10、12x12、さらに難解な15x15のExpertレベルにステップアップしていきましょう。論理パズルとしてのやりごたえがどんどん増していきます。</p>
         </div>
-        <a class="button primary" href="./card-climb-mini/" data-ja>プレイ</a>
-        <a class="button primary" href="./card-climb-mini/" data-en>Play</a>
-      </article>
-    </section>
+      </div>
+    </article>
 
-    <section class="site-links" aria-label="Site links">
-      <article class="link-card">
-        <h2>About</h2>
-        <p><a href="./revealo/about/" data-ja>このサイトについて</a><a href="./revealo/about/" data-en>About this site</a></p>
-      </article>
-      <article class="link-card">
-        <h2>Privacy Policy</h2>
-        <p><a href="./revealo/privacy/" data-ja>プライバシーポリシー</a><a href="./revealo/privacy/" data-en>Privacy Policy</a></p>
-      </article>
-      <article class="link-card">
-        <h2>Contact</h2>
-        <p><a href="./revealo/contact/" data-ja>お問い合わせ</a><a href="./revealo/contact/" data-en>Contact</a></p>
-      </article>
-    </section>
+    <article class="article-section" data-ja>
+      <h2>よくある質問 (FAQ)</h2>
+      <div class="faq-item">
+        <div class="faq-question">Q. ゲームはすべて無料で遊べますか？</div>
+        <div class="faq-answer">A. はい、すべてのパズルと機能は完全無料でプレイできます。課金要素は一切ありません。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Q. ゲームの途中で進行状況は保存されますか？</div>
+        <div class="faq-answer">A. はい、ブラウザのローカルストレージ（LocalStorage）機能を利用して、パズルの進捗やクリア記録が自動的に保存されます。ページを閉じても次回続きから再開できます。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Q. PWAとしてスマホのホーム画面に登録する方法は？</div>
+        <div class="faq-answer">A. iPhoneの場合はSafariでサイトを開き「共有ボタン」から「ホーム画面に追加」を選択します。Androidの場合はChromeで開き、右上のメニューまたはポップアップから「アプリをインストール」をタップします。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Q. 推奨される動作環境は？</div>
+        <div class="faq-answer">A. Safari、Google Chrome、Firefox、Edgeなど、主要なモダンブラウザの最新バージョンで快適に動作します。JavaScriptを有効にしてプレイしてください。</div>
+      </div>
+    </article>
 
-    <footer>© 2026 Logic Games</footer>
+    <!-- English section for global crawlers -->
+    <article class="article-section" data-en>
+      <h2>About Revealo - Picture Logic Coloring Puzzle</h2>
+      <p>Revealo is a free web-based logic puzzle game. By combining visual nonograms (picross) and Sudoku reasoning, it delivers an innovative deduction experience using rich color clues and numerical patterns.</p>
+      <h3>Gameplay Rules</h3>
+      <p>Your goal is to fill the blank cells with the correct colors by reading the color blocks and numbers displayed next to the rows and columns. Each number represents how many consecutive cells of that color exist, and they appear in the specified sequence.</p>
+      <h3>Play on Mobile as a PWA</h3>
+      <p>Install the game onto your mobile home screen via Chrome or Safari. It works offline and offers full-screen premium visual performance just like native applications.</p>
+    </article>
+
+    <footer>
+      <span>© 2026 Logic Games - Revealo</span>
+      <div class="footer-links">
+        <a href="./about/">About</a>
+        <a href="./privacy/">Privacy Policy</a>
+        <a href="./contact/">Contact</a>
+      </div>
+    </footer>
   </main>
   <script>
     const isJapanese = (navigator.languages || [navigator.language || "en"]).some((lang) => String(lang).toLowerCase().startsWith("ja"));

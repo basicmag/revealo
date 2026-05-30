@@ -716,7 +716,9 @@ function startPuzzle(puzzleId, options = {}) {
   document.getElementById("puzzleMeta").textContent = `${modeLabel}${puzzle.createdAt} / ${puzzle.difficulty} / ${puzzle.size}x${puzzle.size}`;
   document.getElementById("puzzleSelect").classList.add("hidden");
   document.getElementById("adListBottom").hidden = true;
-  document.getElementById("imageTool").classList.add("hidden");
+  if (document.getElementById("imageTool")) {
+    document.getElementById("imageTool").classList.add("hidden");
+  }
   document.getElementById("gameView").classList.remove("hidden");
 
   renderPalette();
@@ -732,7 +734,9 @@ function showPuzzleSelect() {
   delete document.documentElement.dataset.boardSize;
   document.getElementById("gameView").classList.add("hidden");
   document.getElementById("puzzleSelect").classList.remove("hidden");
-  document.getElementById("imageTool").classList.add("hidden");
+  if (document.getElementById("imageTool")) {
+    document.getElementById("imageTool").classList.add("hidden");
+  }
   renderPuzzleSelect();
 }
 
@@ -2033,37 +2037,39 @@ document.getElementById("hintBtn").onclick = hint;
 document.getElementById("checkBtn").onclick = check;
 document.getElementById("undoBtn").onclick = undo;
 document.getElementById("backBtn").onclick = showPuzzleSelect;
-document.getElementById("generatePromptBtn").onclick = generateImagePrompt;
-document.getElementById("copyPromptBtn").onclick = copyImagePrompt;
-document.getElementById("autoSubjectBtn").onclick = autoFillSubject;
-document.getElementById("promptColorMode").onchange = () => {
-  applyPromptColorMode();
-  generateSolutionMap();
-};
-document.getElementById("palettePreset").onchange = applyPalettePreset;
-document.getElementById("imageInput").onchange = event => loadToolImage(event.target.files[0]);
-document.getElementById("mapSize").onchange = () => {
-  generateImagePrompt();
-  generateSolutionMap();
-};
-document.getElementById("clueLevel").onchange = generateSolutionMap;
-document.getElementById("whiteThreshold").oninput = generateSolutionMap;
-document.getElementById("edgeThreshold").oninput = generateSolutionMap;
-document.getElementById("lineOpacity").oninput = generateSolutionMap;
-document.getElementById("lineWidth").oninput = generateSolutionMap;
-document.getElementById("generateMapBtn").onclick = () => generateSolutionMap(true);
-document.getElementById("saveToolDefaultsBtn").onclick = saveToolDefaults;
-document.getElementById("addImagePuzzleBtn").onclick = addGeneratedImagePuzzle;
-document.getElementById("copySolutionBtn").onclick = async () => {
-  const output = document.getElementById("solutionOutput");
-  if (!output.value) return;
-  try {
-    await navigator.clipboard.writeText(output.value);
-  } catch {
-    output.select();
-    document.execCommand("copy");
-  }
-};
+if (document.getElementById("imageTool")) {
+  document.getElementById("generatePromptBtn").onclick = generateImagePrompt;
+  document.getElementById("copyPromptBtn").onclick = copyImagePrompt;
+  document.getElementById("autoSubjectBtn").onclick = autoFillSubject;
+  document.getElementById("promptColorMode").onchange = () => {
+    applyPromptColorMode();
+    generateSolutionMap();
+  };
+  document.getElementById("palettePreset").onchange = applyPalettePreset;
+  document.getElementById("imageInput").onchange = event => loadToolImage(event.target.files[0]);
+  document.getElementById("mapSize").onchange = () => {
+    generateImagePrompt();
+    generateSolutionMap();
+  };
+  document.getElementById("clueLevel").onchange = generateSolutionMap;
+  document.getElementById("whiteThreshold").oninput = generateSolutionMap;
+  document.getElementById("edgeThreshold").oninput = generateSolutionMap;
+  document.getElementById("lineOpacity").oninput = generateSolutionMap;
+  document.getElementById("lineWidth").oninput = generateSolutionMap;
+  document.getElementById("generateMapBtn").onclick = () => generateSolutionMap(true);
+  document.getElementById("saveToolDefaultsBtn").onclick = saveToolDefaults;
+  document.getElementById("addImagePuzzleBtn").onclick = addGeneratedImagePuzzle;
+  document.getElementById("copySolutionBtn").onclick = async () => {
+    const output = document.getElementById("solutionOutput");
+    if (!output.value) return;
+    try {
+      await navigator.clipboard.writeText(output.value);
+    } catch {
+      output.select();
+      document.execCommand("copy");
+    }
+  };
+}
 document.getElementById("helpBtn").onclick = () => document.getElementById("helpDialog").showModal();
 document.getElementById("closeHelp").onclick = () => document.getElementById("helpDialog").close();
 document.getElementById("openTutorialBtn").onclick = () => {
@@ -2112,7 +2118,9 @@ window.addEventListener("orientationchange", () => {
 window.addEventListener("beforeunload", saveProgress);
 
 applyLocaleText();
-loadToolDefaults();
-generateImagePrompt();
+if (document.getElementById("imageTool")) {
+  loadToolDefaults();
+  generateImagePrompt();
+}
 renderPuzzleSelect();
 startInitialPuzzleWithTutorial();

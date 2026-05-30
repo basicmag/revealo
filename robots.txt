@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://logicgames.site/sitemap.xml
